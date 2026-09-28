@@ -1,0 +1,932 @@
+Clip duration: 10s
+Detection method: auto
+RMS resolution: 0.1s
+Loudness normalize: True (target -16.0 LUFS)
+Output folder: C:\Users\luthf\Downloads\output_clips
+Total songs: 54
+
+Processing: Ain't My Fault - Zara Larsson.flac [method=auto]
+  pychorus start: 178.23s
+    Source format: 44100Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Ain't My Fault - Zara Larsson\Ain't My Fault - Zara Larsson_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Ain't My Fault - Zara Larsson\Ain't My Fault - Zara Larsson_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Ain't My Fault - Zara Larsson\Ain't My Fault - Zara Larsson_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Ain't My Fault - Zara Larsson\Ain't My Fault - Zara Larsson_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.08 LUFS, true peak -7.98 dBTP
+      FLAC        : -16.08 LUFS, true peak -7.98 dBTP
+      MP3-320k    : -16.07 LUFS, true peak -7.62 dBTP
+      MP3-128k    : -16.43 LUFS, true peak -6.83 dBTP
+    [verify] OK: 0.36 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Ain't My Fault - Zara Larsson\cover.jpg
+  Done: Ain't My Fault - Zara Larsson
+
+Processing: Alone - Marshmello.flac [method=auto]
+  pychorus start: 256.71s
+    Source format: 44100Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Alone - Marshmello\Alone - Marshmello_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Alone - Marshmello\Alone - Marshmello_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Alone - Marshmello\Alone - Marshmello_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Alone - Marshmello\Alone - Marshmello_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.35 LUFS, true peak -9.25 dBTP
+      FLAC        : -16.35 LUFS, true peak -9.25 dBTP
+      MP3-320k    : -16.35 LUFS, true peak -9.14 dBTP
+      MP3-128k    : -16.79 LUFS, true peak -9.23 dBTP
+    [verify] OK: 0.44 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Alone - Marshmello\cover.jpg
+  Done: Alone - Marshmello
+
+Processing: Anytime Anywhere - milet.flac [method=auto]
+  pychorus start: 177.15s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Anytime Anywhere - milet\Anytime Anywhere - milet_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Anytime Anywhere - milet\Anytime Anywhere - milet_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Anytime Anywhere - milet\Anytime Anywhere - milet_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Anytime Anywhere - milet\Anytime Anywhere - milet_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -14.91 LUFS, true peak -4.85 dBTP
+      FLAC        : -14.91 LUFS, true peak -4.85 dBTP
+      MP3-320k    : -14.91 LUFS, true peak -4.80 dBTP
+      MP3-128k    : -15.33 LUFS, true peak -4.97 dBTP
+    [verify] OK: 0.42 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Anytime Anywhere - milet\cover.jpg
+  Done: Anytime Anywhere - milet
+
+Processing: COLORs - SawanoHiroyuki[nZk], Motohiro Hata.flac [method=auto]
+  pychorus start: 127.16s
+    Source format: 96000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    [mp3] 96000Hz not supported by MP3 -> resampling to 44100Hz for MP3 exports
+    -> C:\Users\luthf\Downloads\output_clips\COLORs - SawanoHiroyuki[nZk], Motohiro Hata\COLORs - SawanoHiroyuki[nZk], Motohiro Hata_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\COLORs - SawanoHiroyuki[nZk], Motohiro Hata\COLORs - SawanoHiroyuki[nZk], Motohiro Hata_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\COLORs - SawanoHiroyuki[nZk], Motohiro Hata\COLORs - SawanoHiroyuki[nZk], Motohiro Hata_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\COLORs - SawanoHiroyuki[nZk], Motohiro Hata\COLORs - SawanoHiroyuki[nZk], Motohiro Hata_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.35 LUFS, true peak -6.11 dBTP
+      FLAC        : -15.35 LUFS, true peak -6.11 dBTP
+      MP3-320k    : -15.35 LUFS, true peak -6.08 dBTP
+      MP3-128k    : -15.74 LUFS, true peak -5.52 dBTP
+    [verify] OK: 0.39 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\COLORs - SawanoHiroyuki[nZk], Motohiro Hata\cover.jpg
+  Done: COLORs - SawanoHiroyuki[nZk], Motohiro Hata
+
+Processing: DADDY ! DADDY ! DO ! - Masayuki Suzuki, 鈴木愛理.flac [method=auto]
+  pychorus start: 154.90s
+    Source format: 96000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    [mp3] 96000Hz not supported by MP3 -> resampling to 44100Hz for MP3 exports
+    -> C:\Users\luthf\Downloads\output_clips\DADDY ! DADDY ! DO ! - Masayuki Suzuki, 鈴木愛理\DADDY ! DADDY ! DO ! - Masayuki Suzuki, 鈴木愛理_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\DADDY ! DADDY ! DO ! - Masayuki Suzuki, 鈴木愛理\DADDY ! DADDY ! DO ! - Masayuki Suzuki, 鈴木愛理_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\DADDY ! DADDY ! DO ! - Masayuki Suzuki, 鈴木愛理\DADDY ! DADDY ! DO ! - Masayuki Suzuki, 鈴木愛理_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\DADDY ! DADDY ! DO ! - Masayuki Suzuki, 鈴木愛理\DADDY ! DADDY ! DO ! - Masayuki Suzuki, 鈴木愛理_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.11 LUFS, true peak -9.44 dBTP
+      FLAC        : -16.11 LUFS, true peak -9.44 dBTP
+      MP3-320k    : -16.11 LUFS, true peak -9.10 dBTP
+      MP3-128k    : -16.54 LUFS, true peak -8.56 dBTP
+    [verify] OK: 0.43 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\DADDY ! DADDY ! DO ! - Masayuki Suzuki, 鈴木愛理\cover.jpg
+  Done: DADDY ! DADDY ! DO ! - Masayuki Suzuki, 鈴木愛理
+
+Processing: Distortion!! - 結束バンド.flac [method=auto]
+  pychorus start: 156.52s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Distortion!! - 結束バンド\Distortion!! - 結束バンド_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Distortion!! - 結束バンド\Distortion!! - 結束バンド_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Distortion!! - 結束バンド\Distortion!! - 結束バンド_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Distortion!! - 結束バンド\Distortion!! - 結束バンド_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.95 LUFS, true peak -11.66 dBTP
+      FLAC        : -15.95 LUFS, true peak -11.66 dBTP
+      MP3-320k    : -15.95 LUFS, true peak -11.11 dBTP
+      MP3-128k    : -16.35 LUFS, true peak -10.53 dBTP
+    [verify] OK: 0.40 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Distortion!! - 結束バンド\cover.jpg
+  Done: Distortion!! - 結束バンド
+
+Processing: Dusk Till Dawn (feat. Sia) - Radio Edit - ZAYN, Sia.flac [method=auto]
+  pychorus start: 161.75s
+    Source format: 44100Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Dusk Till Dawn (feat. Sia) - Radio Edit - ZAYN, Sia\Dusk Till Dawn (feat. Sia) - Radio Edit - ZAYN, Sia_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Dusk Till Dawn (feat. Sia) - Radio Edit - ZAYN, Sia\Dusk Till Dawn (feat. Sia) - Radio Edit - ZAYN, Sia_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Dusk Till Dawn (feat. Sia) - Radio Edit - ZAYN, Sia\Dusk Till Dawn (feat. Sia) - Radio Edit - ZAYN, Sia_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Dusk Till Dawn (feat. Sia) - Radio Edit - ZAYN, Sia\Dusk Till Dawn (feat. Sia) - Radio Edit - ZAYN, Sia_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.12 LUFS, true peak -10.16 dBTP
+      FLAC        : -16.12 LUFS, true peak -10.16 dBTP
+      MP3-320k    : -16.11 LUFS, true peak -10.13 dBTP
+      MP3-128k    : -16.52 LUFS, true peak -9.10 dBTP
+    [verify] OK: 0.41 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Dusk Till Dawn (feat. Sia) - Radio Edit - ZAYN, Sia\cover.jpg
+  Done: Dusk Till Dawn (feat. Sia) - Radio Edit - ZAYN, Sia
+
+Processing: Duvet - bôa.flac [method=auto]
+  pychorus start: 176.50s
+    Source format: 44100Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Duvet - bôa\Duvet - bôa_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Duvet - bôa\Duvet - bôa_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Duvet - bôa\Duvet - bôa_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Duvet - bôa\Duvet - bôa_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.03 LUFS, true peak -6.71 dBTP
+      FLAC        : -16.03 LUFS, true peak -6.71 dBTP
+      MP3-320k    : -16.03 LUFS, true peak -6.68 dBTP
+      MP3-128k    : -16.47 LUFS, true peak -7.16 dBTP
+    [verify] OK: 0.44 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Duvet - bôa\cover.jpg
+  Done: Duvet - bôa
+
+Processing: Ex-Otogibanashi - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!.flac [method=auto]
+  pychorus start: 136.43s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Ex-Otogibanashi - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!\Ex-Otogibanashi - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Ex-Otogibanashi - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!\Ex-Otogibanashi - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Ex-Otogibanashi - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!\Ex-Otogibanashi - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Ex-Otogibanashi - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!\Ex-Otogibanashi - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.23 LUFS, true peak -9.74 dBTP
+      FLAC        : -16.23 LUFS, true peak -9.74 dBTP
+      MP3-320k    : -16.23 LUFS, true peak -9.59 dBTP
+      MP3-128k    : -16.67 LUFS, true peak -8.63 dBTP
+    [verify] OK: 0.44 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Ex-Otogibanashi - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!\cover.jpg
+  Done: Ex-Otogibanashi - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!
+
+Processing: Hymn for the Weekend - Coldplay.flac [method=auto]
+  pychorus start: 182.33s
+    Source format: 192000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    [mp3] 192000Hz not supported by MP3 -> resampling to 44100Hz for MP3 exports
+    -> C:\Users\luthf\Downloads\output_clips\Hymn for the Weekend - Coldplay\Hymn for the Weekend - Coldplay_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Hymn for the Weekend - Coldplay\Hymn for the Weekend - Coldplay_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Hymn for the Weekend - Coldplay\Hymn for the Weekend - Coldplay_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Hymn for the Weekend - Coldplay\Hymn for the Weekend - Coldplay_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.07 LUFS, true peak -10.33 dBTP
+      FLAC        : -16.07 LUFS, true peak -10.33 dBTP
+      MP3-320k    : -16.07 LUFS, true peak -9.45 dBTP
+      MP3-128k    : -16.48 LUFS, true peak -8.73 dBTP
+    [verify] OK: 0.41 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Hymn for the Weekend - Coldplay\cover.jpg
+  Done: Hymn for the Weekend - Coldplay
+
+Processing: I Really Want to Stay at Your House - Rosa Walton, Hallie Coggins.flac [method=auto]
+  pychorus start: 212.29s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\I Really Want to Stay at Your House - Rosa Walton, Hallie Coggins\I Really Want to Stay at Your House - Rosa Walton, Hallie Coggins_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\I Really Want to Stay at Your House - Rosa Walton, Hallie Coggins\I Really Want to Stay at Your House - Rosa Walton, Hallie Coggins_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\I Really Want to Stay at Your House - Rosa Walton, Hallie Coggins\I Really Want to Stay at Your House - Rosa Walton, Hallie Coggins_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\I Really Want to Stay at Your House - Rosa Walton, Hallie Coggins\I Really Want to Stay at Your House - Rosa Walton, Hallie Coggins_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.94 LUFS, true peak -8.66 dBTP
+      FLAC        : -15.94 LUFS, true peak -8.66 dBTP
+      MP3-320k    : -15.93 LUFS, true peak -8.37 dBTP
+      MP3-128k    : -16.33 LUFS, true peak -8.04 dBTP
+    [verify] OK: 0.40 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\I Really Want to Stay at Your House - Rosa Walton, Hallie Coggins\cover.jpg
+  Done: I Really Want to Stay at Your House - Rosa Walton, Hallie Coggins
+
+Processing: I'm Nobody - TOGENASHI TOGEARI.flac [method=auto]
+  pychorus start: 78.55s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\I'm Nobody - TOGENASHI TOGEARI\I'm Nobody - TOGENASHI TOGEARI_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\I'm Nobody - TOGENASHI TOGEARI\I'm Nobody - TOGENASHI TOGEARI_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\I'm Nobody - TOGENASHI TOGEARI\I'm Nobody - TOGENASHI TOGEARI_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\I'm Nobody - TOGENASHI TOGEARI\I'm Nobody - TOGENASHI TOGEARI_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.42 LUFS, true peak -6.93 dBTP
+      FLAC        : -16.42 LUFS, true peak -6.93 dBTP
+      MP3-320k    : -16.42 LUFS, true peak -6.86 dBTP
+      MP3-128k    : -16.86 LUFS, true peak -6.91 dBTP
+    [verify] OK: 0.44 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\I'm Nobody - TOGENASHI TOGEARI\cover.jpg
+  Done: I'm Nobody - TOGENASHI TOGEARI
+
+Processing: IRIS OUT - Kenshi Yonezu.flac [method=auto]
+  pychorus start: 117.40s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\IRIS OUT - Kenshi Yonezu\IRIS OUT - Kenshi Yonezu_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\IRIS OUT - Kenshi Yonezu\IRIS OUT - Kenshi Yonezu_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\IRIS OUT - Kenshi Yonezu\IRIS OUT - Kenshi Yonezu_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\IRIS OUT - Kenshi Yonezu\IRIS OUT - Kenshi Yonezu_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.98 LUFS, true peak -9.00 dBTP
+      FLAC        : -15.98 LUFS, true peak -9.00 dBTP
+      MP3-320k    : -15.97 LUFS, true peak -8.73 dBTP
+      MP3-128k    : -16.32 LUFS, true peak -7.92 dBTP
+    [verify] OK: 0.35 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\IRIS OUT - Kenshi Yonezu\cover.jpg
+  Done: IRIS OUT - Kenshi Yonezu
+
+Processing: KICK BACK - Kenshi Yonezu.flac [method=auto]
+  pychorus start: 75.39s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\KICK BACK - Kenshi Yonezu\KICK BACK - Kenshi Yonezu_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\KICK BACK - Kenshi Yonezu\KICK BACK - Kenshi Yonezu_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\KICK BACK - Kenshi Yonezu\KICK BACK - Kenshi Yonezu_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\KICK BACK - Kenshi Yonezu\KICK BACK - Kenshi Yonezu_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.68 LUFS, true peak -7.84 dBTP
+      FLAC        : -15.68 LUFS, true peak -7.84 dBTP
+      MP3-320k    : -15.68 LUFS, true peak -7.68 dBTP
+      MP3-128k    : -16.08 LUFS, true peak -7.09 dBTP
+    [verify] OK: 0.40 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\KICK BACK - Kenshi Yonezu\cover.jpg
+  Done: KICK BACK - Kenshi Yonezu
+
+Processing: Kaikai Kitan - Eve.flac [method=auto]
+  pychorus start: 175.58s
+    Source format: 96000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    [mp3] 96000Hz not supported by MP3 -> resampling to 44100Hz for MP3 exports
+    -> C:\Users\luthf\Downloads\output_clips\Kaikai Kitan - Eve\Kaikai Kitan - Eve_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Kaikai Kitan - Eve\Kaikai Kitan - Eve_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Kaikai Kitan - Eve\Kaikai Kitan - Eve_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Kaikai Kitan - Eve\Kaikai Kitan - Eve_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.26 LUFS, true peak -11.55 dBTP
+      FLAC        : -16.26 LUFS, true peak -11.55 dBTP
+      MP3-320k    : -16.26 LUFS, true peak -10.80 dBTP
+      MP3-128k    : -16.65 LUFS, true peak -10.04 dBTP
+    [verify] OK: 0.39 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Kaikai Kitan - Eve\cover.jpg
+  Done: Kaikai Kitan - Eve
+
+Processing: Mirage - Creepy Nuts.flac [method=auto]
+  pychorus start: 119.44s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Mirage - Creepy Nuts\Mirage - Creepy Nuts_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Mirage - Creepy Nuts\Mirage - Creepy Nuts_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Mirage - Creepy Nuts\Mirage - Creepy Nuts_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Mirage - Creepy Nuts\Mirage - Creepy Nuts_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.41 LUFS, true peak -8.57 dBTP
+      FLAC        : -16.41 LUFS, true peak -8.57 dBTP
+      MP3-320k    : -16.41 LUFS, true peak -8.50 dBTP
+      MP3-128k    : -16.84 LUFS, true peak -8.46 dBTP
+    [verify] OK: 0.43 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Mirage - Creepy Nuts\cover.jpg
+  Done: Mirage - Creepy Nuts
+
+Processing: Moon Halo - Honkai Impact 3Rd Everlasting Flames Animated Short Theme - HOYO-MiX, 茶理理, TetraCalyx, Hanser.flac [method=auto]
+  pychorus start: 175.65s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Moon Halo - Honkai Impact 3Rd Everlasting Flames Animated Short Theme - HOYO-MiX, 茶理理, TetraCalyx, Hanser\Moon Halo - Honkai Impact 3Rd Everlasting Flames Animated Short Theme - HOYO-MiX, 茶理理, TetraCalyx, Hanser_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Moon Halo - Honkai Impact 3Rd Everlasting Flames Animated Short Theme - HOYO-MiX, 茶理理, TetraCalyx, Hanser\Moon Halo - Honkai Impact 3Rd Everlasting Flames Animated Short Theme - HOYO-MiX, 茶理理, TetraCalyx, Hanser_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Moon Halo - Honkai Impact 3Rd Everlasting Flames Animated Short Theme - HOYO-MiX, 茶理理, TetraCalyx, Hanser\Moon Halo - Honkai Impact 3Rd Everlasting Flames Animated Short Theme - HOYO-MiX, 茶理理, TetraCalyx, Hanser_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Moon Halo - Honkai Impact 3Rd Everlasting Flames Animated Short Theme - HOYO-MiX, 茶理理, TetraCalyx, Hanser\Moon Halo - Honkai Impact 3Rd Everlasting Flames Animated Short Theme - HOYO-MiX, 茶理理, TetraCalyx, Hanser_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.85 LUFS, true peak -9.64 dBTP
+      FLAC        : -15.85 LUFS, true peak -9.64 dBTP
+      MP3-320k    : -15.85 LUFS, true peak -9.52 dBTP
+      MP3-128k    : -16.24 LUFS, true peak -8.47 dBTP
+    [verify] OK: 0.39 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Moon Halo - Honkai Impact 3Rd Everlasting Flames Animated Short Theme - HOYO-MiX, 茶理理, TetraCalyx, Hanser\cover.jpg
+  Done: Moon Halo - Honkai Impact 3Rd Everlasting Flames Animated Short Theme - HOYO-MiX, 茶理理, TetraCalyx, Hanser
+
+Processing: Nannmonee - Wasureranneyo.flac [method=auto]
+  pychorus start: 116.60s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Nannmonee - Wasureranneyo\Nannmonee - Wasureranneyo_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Nannmonee - Wasureranneyo\Nannmonee - Wasureranneyo_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Nannmonee - Wasureranneyo\Nannmonee - Wasureranneyo_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Nannmonee - Wasureranneyo\Nannmonee - Wasureranneyo_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.88 LUFS, true peak -11.76 dBTP
+      FLAC        : -15.88 LUFS, true peak -11.76 dBTP
+      MP3-320k    : -15.88 LUFS, true peak -11.55 dBTP
+      MP3-128k    : -16.28 LUFS, true peak -10.53 dBTP
+    [verify] OK: 0.40 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Nannmonee - Wasureranneyo\cover.jpg
+  Done: Nannmonee - Wasureranneyo
+
+Processing: OverThink - 动画《时光代理人》片尾曲 - 饭卡.flac [method=auto]
+  pychorus start: 143.08s
+    Source format: 44100Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\OverThink - 动画《时光代理人》片尾曲 - 饭卡\OverThink - 动画《时光代理人》片尾曲 - 饭卡_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\OverThink - 动画《时光代理人》片尾曲 - 饭卡\OverThink - 动画《时光代理人》片尾曲 - 饭卡_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\OverThink - 动画《时光代理人》片尾曲 - 饭卡\OverThink - 动画《时光代理人》片尾曲 - 饭卡_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\OverThink - 动画《时光代理人》片尾曲 - 饭卡\OverThink - 动画《时光代理人》片尾曲 - 饭卡_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.05 LUFS, true peak -7.88 dBTP
+      FLAC        : -16.05 LUFS, true peak -7.88 dBTP
+      MP3-320k    : -16.05 LUFS, true peak -7.80 dBTP
+      MP3-128k    : -16.49 LUFS, true peak -7.58 dBTP
+    [verify] OK: 0.44 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\OverThink - 动画《时光代理人》片尾曲 - 饭卡\cover.jpg
+  Done: OverThink - 动画《时光代理人》片尾曲 - 饭卡
+
+Processing: Reply - kz, Kaguya(cv.Yuko Natsuyoshi).flac [method=auto]
+  pychorus start: 214.17s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Reply - kz, Kaguya(cv.Yuko Natsuyoshi)\Reply - kz, Kaguya(cv.Yuko Natsuyoshi)_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Reply - kz, Kaguya(cv.Yuko Natsuyoshi)\Reply - kz, Kaguya(cv.Yuko Natsuyoshi)_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Reply - kz, Kaguya(cv.Yuko Natsuyoshi)\Reply - kz, Kaguya(cv.Yuko Natsuyoshi)_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Reply - kz, Kaguya(cv.Yuko Natsuyoshi)\Reply - kz, Kaguya(cv.Yuko Natsuyoshi)_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.02 LUFS, true peak -11.48 dBTP
+      FLAC        : -16.02 LUFS, true peak -11.48 dBTP
+      MP3-320k    : -16.01 LUFS, true peak -11.28 dBTP
+      MP3-128k    : -16.36 LUFS, true peak -9.53 dBTP
+    [verify] OK: 0.35 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Reply - kz, Kaguya(cv.Yuko Natsuyoshi)\cover.jpg
+  Done: Reply - kz, Kaguya(cv.Yuko Natsuyoshi)
+
+Processing: Rude - MAGIC!.flac [method=auto]
+  pychorus start: 173.05s
+    Source format: 44100Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Rude - MAGIC!\Rude - MAGIC!_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Rude - MAGIC!\Rude - MAGIC!_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Rude - MAGIC!\Rude - MAGIC!_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Rude - MAGIC!\Rude - MAGIC!_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -13.09 LUFS, true peak -1.49 dBTP
+      FLAC        : -13.09 LUFS, true peak -1.49 dBTP
+      MP3-320k    : -13.09 LUFS, true peak -1.56 dBTP
+      MP3-128k    : -13.49 LUFS, true peak -1.03 dBTP
+    [verify] OK: 0.40 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Rude - MAGIC!\cover.jpg
+  Done: Rude - MAGIC!
+
+Processing: SPECIALZ - King Gnu.flac [method=auto]
+  pychorus start: 174.92s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\SPECIALZ - King Gnu\SPECIALZ - King Gnu_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\SPECIALZ - King Gnu\SPECIALZ - King Gnu_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\SPECIALZ - King Gnu\SPECIALZ - King Gnu_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\SPECIALZ - King Gnu\SPECIALZ - King Gnu_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.10 LUFS, true peak -10.32 dBTP
+      FLAC        : -16.10 LUFS, true peak -10.32 dBTP
+      MP3-320k    : -16.09 LUFS, true peak -9.88 dBTP
+      MP3-128k    : -16.49 LUFS, true peak -9.36 dBTP
+    [verify] OK: 0.40 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\SPECIALZ - King Gnu\cover.jpg
+  Done: SPECIALZ - King Gnu
+
+Processing: Scared to Be Lonely - Martin Garrix, Dua Lipa.flac [method=auto]
+  pychorus start: 177.82s
+    Source format: 44100Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Scared to Be Lonely - Martin Garrix, Dua Lipa\Scared to Be Lonely - Martin Garrix, Dua Lipa_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Scared to Be Lonely - Martin Garrix, Dua Lipa\Scared to Be Lonely - Martin Garrix, Dua Lipa_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Scared to Be Lonely - Martin Garrix, Dua Lipa\Scared to Be Lonely - Martin Garrix, Dua Lipa_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Scared to Be Lonely - Martin Garrix, Dua Lipa\Scared to Be Lonely - Martin Garrix, Dua Lipa_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.36 LUFS, true peak -7.30 dBTP
+      FLAC        : -15.36 LUFS, true peak -7.30 dBTP
+      MP3-320k    : -15.35 LUFS, true peak -7.27 dBTP
+      MP3-128k    : -15.79 LUFS, true peak -7.22 dBTP
+    [verify] OK: 0.44 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Scared to Be Lonely - Martin Garrix, Dua Lipa\cover.jpg
+  Done: Scared to Be Lonely - Martin Garrix, Dua Lipa
+
+Processing: Shelter - Porter Robinson, Madeon.flac [method=auto]
+  pychorus start: 98.06s
+    Source format: 44100Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Shelter - Porter Robinson, Madeon\Shelter - Porter Robinson, Madeon_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Shelter - Porter Robinson, Madeon\Shelter - Porter Robinson, Madeon_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Shelter - Porter Robinson, Madeon\Shelter - Porter Robinson, Madeon_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Shelter - Porter Robinson, Madeon\Shelter - Porter Robinson, Madeon_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.09 LUFS, true peak -9.52 dBTP
+      FLAC        : -16.09 LUFS, true peak -9.52 dBTP
+      MP3-320k    : -16.09 LUFS, true peak -9.45 dBTP
+      MP3-128k    : -16.46 LUFS, true peak -8.96 dBTP
+    [verify] OK: 0.37 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Shelter - Porter Robinson, Madeon\cover.jpg
+  Done: Shelter - Porter Robinson, Madeon
+
+Processing: Show - Ado.flac [method=auto]
+  pychorus start: 147.18s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Show - Ado\Show - Ado_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Show - Ado\Show - Ado_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Show - Ado\Show - Ado_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Show - Ado\Show - Ado_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.76 LUFS, true peak -11.64 dBTP
+      FLAC        : -15.76 LUFS, true peak -11.64 dBTP
+      MP3-320k    : -15.76 LUFS, true peak -11.52 dBTP
+      MP3-128k    : -16.11 LUFS, true peak -10.03 dBTP
+    [verify] OK: 0.35 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Show - Ado\cover.jpg
+  Done: Show - Ado
+
+Processing: Side To Side - Ariana Grande, Nicki Minaj.flac [method=auto]
+  pychorus start: 85.42s
+    Source format: 44100Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Side To Side - Ariana Grande, Nicki Minaj\Side To Side - Ariana Grande, Nicki Minaj_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Side To Side - Ariana Grande, Nicki Minaj\Side To Side - Ariana Grande, Nicki Minaj_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Side To Side - Ariana Grande, Nicki Minaj\Side To Side - Ariana Grande, Nicki Minaj_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Side To Side - Ariana Grande, Nicki Minaj\Side To Side - Ariana Grande, Nicki Minaj_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.94 LUFS, true peak -6.14 dBTP
+      FLAC        : -15.94 LUFS, true peak -6.14 dBTP
+      MP3-320k    : -15.94 LUFS, true peak -6.67 dBTP
+      MP3-128k    : -16.36 LUFS, true peak -6.83 dBTP
+    [verify] OK: 0.42 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Side To Side - Ariana Grande, Nicki Minaj\cover.jpg
+  Done: Side To Side - Ariana Grande, Nicki Minaj
+
+Processing: Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!.flac [method=auto]
+  pychorus start: 128.11s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!\Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!\Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!\Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!\Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.96 LUFS, true peak -7.41 dBTP
+      FLAC        : -15.96 LUFS, true peak -7.41 dBTP
+      MP3-320k    : -15.96 LUFS, true peak -7.14 dBTP
+      MP3-128k    : -16.38 LUFS, true peak -6.60 dBTP
+    [verify] OK: 0.42 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!\cover.jpg
+  Done: Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!
+
+Processing: Sunflower - Spider-Man Into the Spider-Verse - Post Malone, Swae Lee.flac [method=auto]
+  pychorus start: 14.85s
+    Source format: 44100Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Sunflower - Spider-Man Into the Spider-Verse - Post Malone, Swae Lee\Sunflower - Spider-Man Into the Spider-Verse - Post Malone, Swae Lee_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Sunflower - Spider-Man Into the Spider-Verse - Post Malone, Swae Lee\Sunflower - Spider-Man Into the Spider-Verse - Post Malone, Swae Lee_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Sunflower - Spider-Man Into the Spider-Verse - Post Malone, Swae Lee\Sunflower - Spider-Man Into the Spider-Verse - Post Malone, Swae Lee_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Sunflower - Spider-Man Into the Spider-Verse - Post Malone, Swae Lee\Sunflower - Spider-Man Into the Spider-Verse - Post Malone, Swae Lee_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.19 LUFS, true peak -6.42 dBTP
+      FLAC        : -16.19 LUFS, true peak -6.42 dBTP
+      MP3-320k    : -16.19 LUFS, true peak -6.41 dBTP
+      MP3-128k    : -16.62 LUFS, true peak -6.64 dBTP
+    [verify] OK: 0.43 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Sunflower - Spider-Man Into the Spider-Verse - Post Malone, Swae Lee\cover.jpg
+  Done: Sunflower - Spider-Man Into the Spider-Verse - Post Malone, Swae Lee
+
+Processing: This Is What You Came For - Calvin Harris, Rihanna.flac [method=auto]
+  pychorus start: 188.29s
+    Source format: 44100Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\This Is What You Came For - Calvin Harris, Rihanna\This Is What You Came For - Calvin Harris, Rihanna_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\This Is What You Came For - Calvin Harris, Rihanna\This Is What You Came For - Calvin Harris, Rihanna_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\This Is What You Came For - Calvin Harris, Rihanna\This Is What You Came For - Calvin Harris, Rihanna_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\This Is What You Came For - Calvin Harris, Rihanna\This Is What You Came For - Calvin Harris, Rihanna_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.99 LUFS, true peak -8.68 dBTP
+      FLAC        : -15.99 LUFS, true peak -8.68 dBTP
+      MP3-320k    : -15.99 LUFS, true peak -8.45 dBTP
+      MP3-128k    : -16.43 LUFS, true peak -7.47 dBTP
+    [verify] OK: 0.44 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\This Is What You Came For - Calvin Harris, Rihanna\cover.jpg
+  Done: This Is What You Came For - Calvin Harris, Rihanna
+
+Processing: Thunder - Imagine Dragons.flac [method=auto]
+  pychorus start: 148.16s
+    Source format: 44100Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Thunder - Imagine Dragons\Thunder - Imagine Dragons_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Thunder - Imagine Dragons\Thunder - Imagine Dragons_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Thunder - Imagine Dragons\Thunder - Imagine Dragons_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Thunder - Imagine Dragons\Thunder - Imagine Dragons_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.28 LUFS, true peak -10.73 dBTP
+      FLAC        : -16.28 LUFS, true peak -10.73 dBTP
+      MP3-320k    : -16.28 LUFS, true peak -10.90 dBTP
+      MP3-128k    : -16.67 LUFS, true peak -8.92 dBTP
+    [verify] OK: 0.39 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Thunder - Imagine Dragons\cover.jpg
+  Done: Thunder - Imagine Dragons
+
+Processing: Treat You Better - Shawn Mendes.flac [method=auto]
+  pychorus start: 146.18s
+    Source format: 44100Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Treat You Better - Shawn Mendes\Treat You Better - Shawn Mendes_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Treat You Better - Shawn Mendes\Treat You Better - Shawn Mendes_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Treat You Better - Shawn Mendes\Treat You Better - Shawn Mendes_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Treat You Better - Shawn Mendes\Treat You Better - Shawn Mendes_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.02 LUFS, true peak -7.05 dBTP
+      FLAC        : -15.02 LUFS, true peak -7.05 dBTP
+      MP3-320k    : -15.02 LUFS, true peak -7.00 dBTP
+      MP3-128k    : -15.43 LUFS, true peak -7.10 dBTP
+    [verify] OK: 0.41 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Treat You Better - Shawn Mendes\cover.jpg
+  Done: Treat You Better - Shawn Mendes
+
+Processing: VORTEX - 《时光代理人第二季》动画片头曲 - BaishaJAWS.flac [method=auto]
+  RMS fallback start: 210.30s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\VORTEX - 《时光代理人第二季》动画片头曲 - BaishaJAWS\VORTEX - 《时光代理人第二季》动画片头曲 - BaishaJAWS_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\VORTEX - 《时光代理人第二季》动画片头曲 - BaishaJAWS\VORTEX - 《时光代理人第二季》动画片头曲 - BaishaJAWS_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\VORTEX - 《时光代理人第二季》动画片头曲 - BaishaJAWS\VORTEX - 《时光代理人第二季》动画片头曲 - BaishaJAWS_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\VORTEX - 《时光代理人第二季》动画片头曲 - BaishaJAWS\VORTEX - 《时光代理人第二季》动画片头曲 - BaishaJAWS_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.53 LUFS, true peak -7.81 dBTP
+      FLAC        : -15.53 LUFS, true peak -7.81 dBTP
+      MP3-320k    : -15.53 LUFS, true peak -7.74 dBTP
+      MP3-128k    : -15.94 LUFS, true peak -7.52 dBTP
+    [verify] OK: 0.41 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\VORTEX - 《时光代理人第二季》动画片头曲 - BaishaJAWS\cover.jpg
+  Done: VORTEX - 《时光代理人第二季》动画片头曲 - BaishaJAWS
+
+Processing: Viva La Vida - Coldplay.flac [method=auto]
+  pychorus start: 195.58s
+    Source format: 44100Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Viva La Vida - Coldplay\Viva La Vida - Coldplay_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Viva La Vida - Coldplay\Viva La Vida - Coldplay_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Viva La Vida - Coldplay\Viva La Vida - Coldplay_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Viva La Vida - Coldplay\Viva La Vida - Coldplay_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.98 LUFS, true peak -9.35 dBTP
+      FLAC        : -15.98 LUFS, true peak -9.35 dBTP
+      MP3-320k    : -15.98 LUFS, true peak -9.28 dBTP
+      MP3-128k    : -16.40 LUFS, true peak -8.90 dBTP
+    [verify] OK: 0.42 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Viva La Vida - Coldplay\cover.jpg
+  Done: Viva La Vida - Coldplay
+
+Processing: World is Mine - Kaguya&Yachiyo Runami ver. - CPK! Remix - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami).flac [method=auto]
+  pychorus start: 70.38s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\World is Mine - Kaguya&Yachiyo Runami ver. - CPK! Remix - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami)\World is Mine - Kaguya&Yachiyo Runami ver. - CPK! Remix - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami)_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\World is Mine - Kaguya&Yachiyo Runami ver. - CPK! Remix - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami)\World is Mine - Kaguya&Yachiyo Runami ver. - CPK! Remix - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami)_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\World is Mine - Kaguya&Yachiyo Runami ver. - CPK! Remix - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami)\World is Mine - Kaguya&Yachiyo Runami ver. - CPK! Remix - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami)_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\World is Mine - Kaguya&Yachiyo Runami ver. - CPK! Remix - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami)\World is Mine - Kaguya&Yachiyo Runami ver. - CPK! Remix - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami)_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.71 LUFS, true peak -11.22 dBTP
+      FLAC        : -15.71 LUFS, true peak -11.22 dBTP
+      MP3-320k    : -15.71 LUFS, true peak -10.80 dBTP
+      MP3-128k    : -16.12 LUFS, true peak -9.76 dBTP
+    [verify] OK: 0.41 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\World is Mine - Kaguya&Yachiyo Runami ver. - CPK! Remix - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami)\cover.jpg
+  Done: World is Mine - Kaguya&Yachiyo Runami ver. - CPK! Remix - ryo (supercell), Kaguya(cv.Yuko Natsuyoshi), Yachiyo Runami(cv.Saori Hayami)
+
+Processing: Worth It (feat. Kid Ink) - Fifth Harmony, Kid Ink.flac [method=auto]
+  pychorus start: 211.01s
+    Source format: 44100Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Worth It (feat. Kid Ink) - Fifth Harmony, Kid Ink\Worth It (feat. Kid Ink) - Fifth Harmony, Kid Ink_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Worth It (feat. Kid Ink) - Fifth Harmony, Kid Ink\Worth It (feat. Kid Ink) - Fifth Harmony, Kid Ink_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Worth It (feat. Kid Ink) - Fifth Harmony, Kid Ink\Worth It (feat. Kid Ink) - Fifth Harmony, Kid Ink_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Worth It (feat. Kid Ink) - Fifth Harmony, Kid Ink\Worth It (feat. Kid Ink) - Fifth Harmony, Kid Ink_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.16 LUFS, true peak -8.90 dBTP
+      FLAC        : -16.16 LUFS, true peak -8.90 dBTP
+      MP3-320k    : -16.15 LUFS, true peak -8.77 dBTP
+      MP3-128k    : -16.58 LUFS, true peak -7.97 dBTP
+    [verify] OK: 0.43 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Worth It (feat. Kid Ink) - Fifth Harmony, Kid Ink\cover.jpg
+  Done: Worth It (feat. Kid Ink) - Fifth Harmony, Kid Ink
+
+Processing: Wrong World - TOGENASHI TOGEARI.flac [method=auto]
+  pychorus start: 154.96s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Wrong World - TOGENASHI TOGEARI\Wrong World - TOGENASHI TOGEARI_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Wrong World - TOGENASHI TOGEARI\Wrong World - TOGENASHI TOGEARI_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Wrong World - TOGENASHI TOGEARI\Wrong World - TOGENASHI TOGEARI_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Wrong World - TOGENASHI TOGEARI\Wrong World - TOGENASHI TOGEARI_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.74 LUFS, true peak -11.59 dBTP
+      FLAC        : -16.74 LUFS, true peak -11.59 dBTP
+      MP3-320k    : -16.74 LUFS, true peak -11.32 dBTP
+      MP3-128k    : -17.13 LUFS, true peak -10.23 dBTP
+    [verify] OK: 0.39 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Wrong World - TOGENASHI TOGEARI\cover.jpg
+  Done: Wrong World - TOGENASHI TOGEARI
+
+Processing: XƎTЯOVerthink - 《时光代理人第二季》宣传曲 - BaishaJAWS, 饭卡.flac [method=auto]
+  RMS fallback start: 73.10s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\XƎTЯOVerthink - 《时光代理人第二季》宣传曲 - BaishaJAWS, 饭卡\XƎTЯOVerthink - 《时光代理人第二季》宣传曲 - BaishaJAWS, 饭卡_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\XƎTЯOVerthink - 《时光代理人第二季》宣传曲 - BaishaJAWS, 饭卡\XƎTЯOVerthink - 《时光代理人第二季》宣传曲 - BaishaJAWS, 饭卡_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\XƎTЯOVerthink - 《时光代理人第二季》宣传曲 - BaishaJAWS, 饭卡\XƎTЯOVerthink - 《时光代理人第二季》宣传曲 - BaishaJAWS, 饭卡_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\XƎTЯOVerthink - 《时光代理人第二季》宣传曲 - BaishaJAWS, 饭卡\XƎTЯOVerthink - 《时光代理人第二季》宣传曲 - BaishaJAWS, 饭卡_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.81 LUFS, true peak -8.72 dBTP
+      FLAC        : -15.81 LUFS, true peak -8.72 dBTP
+      MP3-320k    : -15.81 LUFS, true peak -8.91 dBTP
+      MP3-128k    : -16.23 LUFS, true peak -8.42 dBTP
+    [verify] OK: 0.42 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\XƎTЯOVerthink - 《时光代理人第二季》宣传曲 - BaishaJAWS, 饭卡\cover.jpg
+  Done: XƎTЯOVerthink - 《时光代理人第二季》宣传曲 - BaishaJAWS, 饭卡
+
+Processing: Young Dumb & Broke - Khalid.flac [method=auto]
+  pychorus start: 165.59s
+    Source format: 44100Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\Young Dumb & Broke - Khalid\Young Dumb & Broke - Khalid_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\Young Dumb & Broke - Khalid\Young Dumb & Broke - Khalid_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\Young Dumb & Broke - Khalid\Young Dumb & Broke - Khalid_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\Young Dumb & Broke - Khalid\Young Dumb & Broke - Khalid_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.95 LUFS, true peak -7.71 dBTP
+      FLAC        : -15.95 LUFS, true peak -7.71 dBTP
+      MP3-320k    : -15.95 LUFS, true peak -7.71 dBTP
+      MP3-128k    : -16.37 LUFS, true peak -6.55 dBTP
+    [verify] OK: 0.42 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\Young Dumb & Broke - Khalid\cover.jpg
+  Done: Young Dumb & Broke - Khalid
+
+Processing: あのバンド - 結束バンド.flac [method=auto]
+  pychorus start: 154.72s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\あのバンド - 結束バンド\あのバンド - 結束バンド_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\あのバンド - 結束バンド\あのバンド - 結束バンド_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\あのバンド - 結束バンド\あのバンド - 結束バンド_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\あのバンド - 結束バンド\あのバンド - 結束バンド_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.24 LUFS, true peak -7.07 dBTP
+      FLAC        : -15.24 LUFS, true peak -7.07 dBTP
+      MP3-320k    : -15.24 LUFS, true peak -6.95 dBTP
+      MP3-128k    : -15.63 LUFS, true peak -6.70 dBTP
+    [verify] OK: 0.39 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\あのバンド - 結束バンド\cover.jpg
+  Done: あのバンド - 結束バンド
+
+Processing: あのバンド -恒星- Live ver. - 結束バンド.flac [method=auto]
+  pychorus start: 123.30s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\あのバンド -恒星- Live ver. - 結束バンド\あのバンド -恒星- Live ver. - 結束バンド_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\あのバンド -恒星- Live ver. - 結束バンド\あのバンド -恒星- Live ver. - 結束バンド_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\あのバンド -恒星- Live ver. - 結束バンド\あのバンド -恒星- Live ver. - 結束バンド_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\あのバンド -恒星- Live ver. - 結束バンド\あのバンド -恒星- Live ver. - 結束バンド_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.06 LUFS, true peak -11.39 dBTP
+      FLAC        : -16.06 LUFS, true peak -11.39 dBTP
+      MP3-320k    : -16.06 LUFS, true peak -11.22 dBTP
+      MP3-128k    : -16.47 LUFS, true peak -10.23 dBTP
+    [verify] OK: 0.41 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\あのバンド -恒星- Live ver. - 結束バンド\cover.jpg
+  Done: あのバンド -恒星- Live ver. - 結束バンド
+
+Processing: なんもない (feat. 星街すいせい, sakuma.) - MAISONdes, Hoshimachi Suisei, sakuma.flac [method=auto]
+  pychorus start: 174.70s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\なんもない (feat. 星街すいせい, sakuma.) - MAISONdes, Hoshimachi Suisei, sakuma\なんもない (feat. 星街すいせい, sakuma.) - MAISONdes, Hoshimachi Suisei, sakuma_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\なんもない (feat. 星街すいせい, sakuma.) - MAISONdes, Hoshimachi Suisei, sakuma\なんもない (feat. 星街すいせい, sakuma.) - MAISONdes, Hoshimachi Suisei, sakuma_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\なんもない (feat. 星街すいせい, sakuma.) - MAISONdes, Hoshimachi Suisei, sakuma\なんもない (feat. 星街すいせい, sakuma.) - MAISONdes, Hoshimachi Suisei, sakuma_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\なんもない (feat. 星街すいせい, sakuma.) - MAISONdes, Hoshimachi Suisei, sakuma\なんもない (feat. 星街すいせい, sakuma.) - MAISONdes, Hoshimachi Suisei, sakuma_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.64 LUFS, true peak -10.49 dBTP
+      FLAC        : -15.64 LUFS, true peak -10.49 dBTP
+      MP3-320k    : -15.64 LUFS, true peak -10.06 dBTP
+      MP3-128k    : -16.02 LUFS, true peak -8.72 dBTP
+    [verify] OK: 0.38 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\なんもない (feat. 星街すいせい, sakuma.) - MAISONdes, Hoshimachi Suisei, sakuma\cover.jpg
+  Done: なんもない (feat. 星街すいせい, sakuma.) - MAISONdes, Hoshimachi Suisei, sakuma
+
+Processing: ゆめみてたのあたし - Daoko.flac [method=auto]
+  pychorus start: 201.28s
+    Source format: 96000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    [mp3] 96000Hz not supported by MP3 -> resampling to 44100Hz for MP3 exports
+    -> C:\Users\luthf\Downloads\output_clips\ゆめみてたのあたし - Daoko\ゆめみてたのあたし - Daoko_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\ゆめみてたのあたし - Daoko\ゆめみてたのあたし - Daoko_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\ゆめみてたのあたし - Daoko\ゆめみてたのあたし - Daoko_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\ゆめみてたのあたし - Daoko\ゆめみてたのあたし - Daoko_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.15 LUFS, true peak -9.59 dBTP
+      FLAC        : -16.15 LUFS, true peak -9.59 dBTP
+      MP3-320k    : -16.15 LUFS, true peak -9.32 dBTP
+      MP3-128k    : -16.54 LUFS, true peak -8.64 dBTP
+    [verify] OK: 0.39 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\ゆめみてたのあたし - Daoko\cover.jpg
+  Done: ゆめみてたのあたし - Daoko
+
+Processing: カラカラ -恒星- Live ver. - 結束バンド.flac [method=auto]
+  pychorus start: 144.80s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\カラカラ -恒星- Live ver. - 結束バンド\カラカラ -恒星- Live ver. - 結束バンド_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\カラカラ -恒星- Live ver. - 結束バンド\カラカラ -恒星- Live ver. - 結束バンド_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\カラカラ -恒星- Live ver. - 結束バンド\カラカラ -恒星- Live ver. - 結束バンド_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\カラカラ -恒星- Live ver. - 結束バンド\カラカラ -恒星- Live ver. - 結束バンド_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.98 LUFS, true peak -11.37 dBTP
+      FLAC        : -15.98 LUFS, true peak -11.37 dBTP
+      MP3-320k    : -15.98 LUFS, true peak -11.05 dBTP
+      MP3-128k    : -16.38 LUFS, true peak -10.28 dBTP
+    [verify] OK: 0.40 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\カラカラ -恒星- Live ver. - 結束バンド\cover.jpg
+  Done: カラカラ -恒星- Live ver. - 結束バンド
+
+Processing: ギターと孤独と蒼い惑星 - 結束バンド.flac [method=auto]
+  pychorus start: 116.43s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\ギターと孤独と蒼い惑星 - 結束バンド\ギターと孤独と蒼い惑星 - 結束バンド_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\ギターと孤独と蒼い惑星 - 結束バンド\ギターと孤独と蒼い惑星 - 結束バンド_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\ギターと孤独と蒼い惑星 - 結束バンド\ギターと孤独と蒼い惑星 - 結束バンド_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\ギターと孤独と蒼い惑星 - 結束バンド\ギターと孤独と蒼い惑星 - 結束バンド_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.77 LUFS, true peak -9.21 dBTP
+      FLAC        : -15.77 LUFS, true peak -9.21 dBTP
+      MP3-320k    : -15.77 LUFS, true peak -9.19 dBTP
+      MP3-128k    : -16.19 LUFS, true peak -9.08 dBTP
+    [verify] OK: 0.42 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\ギターと孤独と蒼い惑星 - 結束バンド\cover.jpg
+  Done: ギターと孤独と蒼い惑星 - 結束バンド
+
+Processing: ギターと孤独と蒼い惑星 -恒星- Live ver. - 結束バンド.flac [method=auto]
+  pychorus start: 119.98s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\ギターと孤独と蒼い惑星 -恒星- Live ver. - 結束バンド\ギターと孤独と蒼い惑星 -恒星- Live ver. - 結束バンド_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\ギターと孤独と蒼い惑星 -恒星- Live ver. - 結束バンド\ギターと孤独と蒼い惑星 -恒星- Live ver. - 結束バンド_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\ギターと孤独と蒼い惑星 -恒星- Live ver. - 結束バンド\ギターと孤独と蒼い惑星 -恒星- Live ver. - 結束バンド_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\ギターと孤独と蒼い惑星 -恒星- Live ver. - 結束バンド\ギターと孤独と蒼い惑星 -恒星- Live ver. - 結束バンド_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.05 LUFS, true peak -10.57 dBTP
+      FLAC        : -16.05 LUFS, true peak -10.57 dBTP
+      MP3-320k    : -16.05 LUFS, true peak -10.43 dBTP
+      MP3-128k    : -16.46 LUFS, true peak -9.80 dBTP
+    [verify] OK: 0.41 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\ギターと孤独と蒼い惑星 -恒星- Live ver. - 結束バンド\cover.jpg
+  Done: ギターと孤独と蒼い惑星 -恒星- Live ver. - 結束バンド
+
+Processing: ハッピーシンセサイザ (Cover) - Happy Synthesizer (Cover) - Kaguya(cv.Yuko Natsuyoshi).flac [method=auto]
+  RMS fallback start: 9.80s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\ハッピーシンセサイザ (Cover) - Happy Synthesizer (Cover) - Kaguya(cv.Yuko Natsuyoshi)\ハッピーシンセサイザ (Cover) - Happy Synthesizer (Cover) - Kaguya(cv.Yuko Natsuyoshi)_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\ハッピーシンセサイザ (Cover) - Happy Synthesizer (Cover) - Kaguya(cv.Yuko Natsuyoshi)\ハッピーシンセサイザ (Cover) - Happy Synthesizer (Cover) - Kaguya(cv.Yuko Natsuyoshi)_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\ハッピーシンセサイザ (Cover) - Happy Synthesizer (Cover) - Kaguya(cv.Yuko Natsuyoshi)\ハッピーシンセサイザ (Cover) - Happy Synthesizer (Cover) - Kaguya(cv.Yuko Natsuyoshi)_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\ハッピーシンセサイザ (Cover) - Happy Synthesizer (Cover) - Kaguya(cv.Yuko Natsuyoshi)\ハッピーシンセサイザ (Cover) - Happy Synthesizer (Cover) - Kaguya(cv.Yuko Natsuyoshi)_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.26 LUFS, true peak -10.91 dBTP
+      FLAC        : -16.26 LUFS, true peak -10.91 dBTP
+      MP3-320k    : -16.26 LUFS, true peak -10.66 dBTP
+      MP3-128k    : -16.64 LUFS, true peak -8.68 dBTP
+    [verify] OK: 0.38 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\ハッピーシンセサイザ (Cover) - Happy Synthesizer (Cover) - Kaguya(cv.Yuko Natsuyoshi)\cover.jpg
+  Done: ハッピーシンセサイザ (Cover) - Happy Synthesizer (Cover) - Kaguya(cv.Yuko Natsuyoshi)
+
+Processing: ビビデバ - Hoshimachi Suisei.flac [method=auto]
+  pychorus start: 127.57s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\ビビデバ - Hoshimachi Suisei\ビビデバ - Hoshimachi Suisei_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\ビビデバ - Hoshimachi Suisei\ビビデバ - Hoshimachi Suisei_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\ビビデバ - Hoshimachi Suisei\ビビデバ - Hoshimachi Suisei_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\ビビデバ - Hoshimachi Suisei\ビビデバ - Hoshimachi Suisei_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.48 LUFS, true peak -9.70 dBTP
+      FLAC        : -15.48 LUFS, true peak -9.70 dBTP
+      MP3-320k    : -15.47 LUFS, true peak -9.30 dBTP
+      MP3-128k    : -15.86 LUFS, true peak -7.47 dBTP
+    [verify] OK: 0.39 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\ビビデバ - Hoshimachi Suisei\cover.jpg
+  Done: ビビデバ - Hoshimachi Suisei
+
+Processing: ラブ・ドラマティック - Masayuki Suzuki, 伊原六花.flac [method=auto]
+  pychorus start: 139.60s
+    Source format: 96000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    [mp3] 96000Hz not supported by MP3 -> resampling to 44100Hz for MP3 exports
+    -> C:\Users\luthf\Downloads\output_clips\ラブ・ドラマティック - Masayuki Suzuki, 伊原六花\ラブ・ドラマティック - Masayuki Suzuki, 伊原六花_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\ラブ・ドラマティック - Masayuki Suzuki, 伊原六花\ラブ・ドラマティック - Masayuki Suzuki, 伊原六花_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\ラブ・ドラマティック - Masayuki Suzuki, 伊原六花\ラブ・ドラマティック - Masayuki Suzuki, 伊原六花_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\ラブ・ドラマティック - Masayuki Suzuki, 伊原六花\ラブ・ドラマティック - Masayuki Suzuki, 伊原六花_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.03 LUFS, true peak -7.83 dBTP
+      FLAC        : -16.03 LUFS, true peak -7.83 dBTP
+      MP3-320k    : -16.02 LUFS, true peak -7.71 dBTP
+      MP3-128k    : -16.45 LUFS, true peak -7.45 dBTP
+    [verify] OK: 0.43 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\ラブ・ドラマティック - Masayuki Suzuki, 伊原六花\cover.jpg
+  Done: ラブ・ドラマティック - Masayuki Suzuki, 伊原六花
+
+Processing: 忘れてやらない - 結束バンド.flac [method=auto]
+  pychorus start: 161.90s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\忘れてやらない - 結束バンド\忘れてやらない - 結束バンド_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\忘れてやらない - 結束バンド\忘れてやらない - 結束バンド_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\忘れてやらない - 結束バンド\忘れてやらない - 結束バンド_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\忘れてやらない - 結束バンド\忘れてやらない - 結束バンド_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.70 LUFS, true peak -10.48 dBTP
+      FLAC        : -15.70 LUFS, true peak -10.48 dBTP
+      MP3-320k    : -15.70 LUFS, true peak -10.04 dBTP
+      MP3-128k    : -16.11 LUFS, true peak -9.60 dBTP
+    [verify] OK: 0.41 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\忘れてやらない - 結束バンド\cover.jpg
+  Done: 忘れてやらない - 結束バンド
+
+Processing: 星座になれたら - 結束バンド.flac [method=auto]
+  pychorus start: 108.28s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\星座になれたら - 結束バンド\星座になれたら - 結束バンド_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\星座になれたら - 結束バンド\星座になれたら - 結束バンド_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\星座になれたら - 結束バンド\星座になれたら - 結束バンド_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\星座になれたら - 結束バンド\星座になれたら - 結束バンド_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.75 LUFS, true peak -7.60 dBTP
+      FLAC        : -15.75 LUFS, true peak -7.60 dBTP
+      MP3-320k    : -15.75 LUFS, true peak -7.33 dBTP
+      MP3-128k    : -16.17 LUFS, true peak -7.02 dBTP
+    [verify] OK: 0.42 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\星座になれたら - 結束バンド\cover.jpg
+  Done: 星座になれたら - 結束バンド
+
+Processing: 星座になれたら -恒星- Live ver. - 結束バンド.flac [method=auto]
+  pychorus start: 111.59s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\星座になれたら -恒星- Live ver. - 結束バンド\星座になれたら -恒星- Live ver. - 結束バンド_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\星座になれたら -恒星- Live ver. - 結束バンド\星座になれたら -恒星- Live ver. - 結束バンド_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\星座になれたら -恒星- Live ver. - 結束バンド\星座になれたら -恒星- Live ver. - 結束バンド_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\星座になれたら -恒星- Live ver. - 結束バンド\星座になれたら -恒星- Live ver. - 結束バンド_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.80 LUFS, true peak -9.50 dBTP
+      FLAC        : -15.80 LUFS, true peak -9.50 dBTP
+      MP3-320k    : -15.79 LUFS, true peak -9.43 dBTP
+      MP3-128k    : -16.22 LUFS, true peak -8.65 dBTP
+    [verify] OK: 0.43 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\星座になれたら -恒星- Live ver. - 結束バンド\cover.jpg
+  Done: 星座になれたら -恒星- Live ver. - 結束バンド
+
+Processing: 星降る海 - Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!.flac [method=auto]
+  pychorus start: 128.11s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\星降る海 - Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!\星降る海 - Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\星降る海 - Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!\星降る海 - Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\星降る海 - Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!\星降る海 - Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\星降る海 - Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!\星降る海 - Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.96 LUFS, true peak -7.41 dBTP
+      FLAC        : -15.96 LUFS, true peak -7.41 dBTP
+      MP3-320k    : -15.96 LUFS, true peak -7.14 dBTP
+      MP3-128k    : -16.38 LUFS, true peak -6.60 dBTP
+    [verify] OK: 0.42 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\星降る海 - Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!\cover.jpg
+  Done: 星降る海 - Starry Sea - Aqu3ra, Yachiyo Runami(cv.Saori Hayami), Cosmic Princess Kaguya!
+
+Processing: 青い春と西の空 - 結束バンド.flac [method=auto]
+  pychorus start: 218.67s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\青い春と西の空 - 結束バンド\青い春と西の空 - 結束バンド_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\青い春と西の空 - 結束バンド\青い春と西の空 - 結束バンド_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\青い春と西の空 - 結束バンド\青い春と西の空 - 結束バンド_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\青い春と西の空 - 結束バンド\青い春と西の空 - 結束バンド_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -16.01 LUFS, true peak -9.19 dBTP
+      FLAC        : -16.01 LUFS, true peak -9.19 dBTP
+      MP3-320k    : -16.01 LUFS, true peak -8.99 dBTP
+      MP3-128k    : -16.41 LUFS, true peak -8.74 dBTP
+    [verify] OK: 0.40 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\青い春と西の空 - 結束バンド\cover.jpg
+  Done: 青い春と西の空 - 結束バンド
+
+Processing: 青春コンプレックス - 結束バンド.flac [method=auto]
+  pychorus start: 90.77s
+    Source format: 48000Hz, codec pcm_s24le
+    Normalizing loudness to -16.0 LUFS...
+    -> C:\Users\luthf\Downloads\output_clips\青春コンプレックス - 結束バンド\青春コンプレックス - 結束バンド_uncompressed.wav
+    -> C:\Users\luthf\Downloads\output_clips\青春コンプレックス - 結束バンド\青春コンプレックス - 結束バンド_lossless.flac
+    -> C:\Users\luthf\Downloads\output_clips\青春コンプレックス - 結束バンド\青春コンプレックス - 結束バンド_mp3_320k.mp3
+    -> C:\Users\luthf\Downloads\output_clips\青春コンプレックス - 結束バンド\青春コンプレックス - 結束バンド_mp3_128k.mp3
+    Verifying loudness across all 4 outputs:
+      WAV         : -15.85 LUFS, true peak -11.90 dBTP
+      FLAC        : -15.85 LUFS, true peak -11.90 dBTP
+      MP3-320k    : -15.85 LUFS, true peak -11.43 dBTP
+      MP3-128k    : -16.24 LUFS, true peak -10.42 dBTP
+    [verify] OK: 0.39 LU spread across outputs (within tolerance)
+    -> C:\Users\luthf\Downloads\output_clips\青春コンプレックス - 結束バンド\cover.jpg
+  Done: 青春コンプレックス - 結束バンド
+
+All done.

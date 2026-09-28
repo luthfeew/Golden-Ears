@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09090b">
+  <meta name="description"
+    content="Golden Ears Blind Test - Uji kepekaan telinga Anda membedakan audio Lossless murni (FLAC/WAV) dengan MP3 320k dan 128k.">
+  <title>Golden Ears Blind Test | Lossless vs Lossy Audio</title>
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237c3aed'><path d='M12 3a9 9 0 0 0-9 9v7a3 3 0 0 0 3 3h1a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H5v-3a7 7 0 1 1 14 0v3h-2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h1a3 3 0 0 0 3-3v-7a9 9 0 0 0-9-9z'/></svg>">
+
+  <!-- Google Font: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS v3 via CDN (with local fallback) -->
+  <script src="assets/vendor/tailwindcss.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              200: '#ddd6fe',
+              300: '#c4b5fd',
+              400: '#a78bfa',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+              700: '#6d28d9',
+              800: '#5b21b6',
+              900: '#4c1d95',
+              950: '#2e1065',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="assets/vendor/lucide.js"></script>
+
+  <!-- Custom Companion CSS (Range slider & keyframes) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body
+  class="bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans min-h-screen antialiased selection:bg-brand-500 selection:text-white transition-colors duration-200">
+
+  <!-- Sticky Top Header -->
+  <header
+    class="sticky top-0 z-40 backdrop-blur-md bg-white/80 dark:bg-zinc-950/80 border-b border-zinc-200 dark:border-zinc-800 transition-colors">
+    <div class="max-w-2xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <button id="btn-header-home"
+          class="p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 transition"
+          title="Kembali ke Beranda" style="display: none;">
+          <i data-lucide="arrow-left" class="w-5 h-5"></i>
+        </button>
+        <div
+          class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20">
+          <i data-lucide="headphones" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h1 class="font-extrabold text-base leading-tight tracking-tight text-zinc-900 dark:text-white">Golden Ears
+          </h1>
+          <p class="text-xs text-zinc-500 dark:text-zinc-400">Blind Audio Test</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-1.5">
+        <button id="btn-theme-toggle"
+          class="p-2 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 transition"
+          title="Ganti Tema">
+          <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+          <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-2xl mx-auto px-4 py-6 sm:py-8">
+
+    <!-- ======================================================== -->
+    <!-- SCREEN 1: INTRO & CONFIGURATION                          -->
+    <!-- ======================================================== -->
+    <section id="screen-intro" class="space-y-6">
+
+      <!-- Hero Card -->
+      <div
+        class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 sm:p-8 shadow-xl shadow-zinc-200/50 dark:shadow-none transition-colors">
+
+        <!-- Header Badge -->
+        <div class="text-center space-y-3 mb-8">
+          <div
+            class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-brand-50 dark:bg-brand-950/60 text-brand-700 dark:text-brand-300 border border-brand-200 dark:border-brand-800">
+            <i data-lucide="headphones" class="w-3.5 h-3.5"></i>
+            <span>Tes Kepekaan Telinga</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
+            Seberapa Peka Pendengaranmu?
+          </h2>
+          <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 max-w-xl mx-auto leading-relaxed">
+            Uji telingamu membedakan audio kualitas master murni (<strong>Lossless FLAC/WAV</strong>) dari format
+            kompresi (<strong>MP3 320 kbps & 128 kbps</strong>) lewat 10 lagu acak.
+          </p>
+        </div>
+
+        <!-- 3-Step Evaluation Flow (Santai Tegas) -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+          <div
+            class="bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-left">
+            <div class="flex items-center gap-2 mb-2.5">
+              <span
+                class="inline-flex items-center justify-center w-6 h-6 rounded-md bg-brand-100 dark:bg-brand-900/60 text-brand-700 dark:text-brand-300 font-bold text-xs">1</span>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Tahap
+                1</span>
+            </div>
+            <h3 class="font-bold text-sm text-zinc-900 dark:text-white">Dengarkan & Bandingkan</h3>
+            <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1 leading-relaxed">Gonta-ganti Sampel A, B, dan C saat
+              musik berputar. Pergantian musik instan tanpa jeda.</p>
+          </div>
+          <div
+            class="bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-left">
+            <div class="flex items-center gap-2 mb-2.5">
+              <span
+                class="inline-flex items-center justify-center w-6 h-6 rounded-md bg-brand-100 dark:bg-brand-900/60 text-brand-700 dark:text-brand-300 font-bold text-xs">2</span>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Tahap
+                2</span>
+            </div>
+            <h3 class="font-bold text-sm text-zinc-900 dark:text-white">Tebak & Kunci Jawaban</h3>
+            <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1 leading-relaxed">Pilih sampel yang menurutmu
+              kualitasnya paling jernih dan utuh.</p>
+          </div>
+          <div
+            class="bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-left">
+            <div class="flex items-center gap-2 mb-2.5">
+              <span
+                class="inline-flex items-center justify-center w-6 h-6 rounded-md bg-brand-100 dark:bg-brand-900/60 text-brand-700 dark:text-brand-300 font-bold text-xs">3</span>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Tahap
+                3</span>
+            </div>
+            <h3 class="font-bold text-sm text-zinc-900 dark:text-white">Lihat Rapor Akurasi</h3>
+            <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1 leading-relaxed">Selesaikan 10 lagu untuk mengetahui
+              seberapa tajam telingamu mengenali kualitas audio asli.</p>
+          </div>
+        </div>
+
+        <!-- Listening Recommendation Notice -->
+        <div
+          class="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/60 rounded-xl p-4 flex items-start gap-3 mb-6">
+          <i data-lucide="headphones" class="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5"></i>
+          <div class="text-xs sm:text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
+            <strong class="font-bold">Tips Mendengarkan:</strong> Gunakan IEM atau headphone yang bagus di ruangan
+            tenang.
+          </div>
+        </div>
+
+        <!-- Format Selection (FLAC vs WAV) -->
+        <div
+          class="bg-zinc-50 dark:bg-zinc-800/40 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 sm:p-5 mb-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="font-bold text-sm text-zinc-900 dark:text-white">Pilih Format Lossless Acuan</h3>
+
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="format-options">
+            <!-- FLAC Card -->
+            <label id="card-format-flac"
+              class="cursor-pointer border-2 border-brand-500 bg-brand-50/50 dark:bg-brand-950/40 rounded-xl p-4 transition-all block">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="font-extrabold text-base text-zinc-900 dark:text-white">FLAC</span>
+                <span
+                  class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">Direkomendasikan</span>
+              </div>
+              <p class="text-xs text-zinc-600 dark:text-zinc-300 font-medium">Lossless terkompresi (~30 MB total)</p>
+              <p class="text-[11px] text-zinc-500 dark:text-zinc-400 mt-1">Kompatibel di semua browser, download cepat
+                dan hemat data</p>
+              <input type="radio" name="audio-format" value="flac" class="sr-only" checked>
+            </label>
+
+            <!-- WAV Card -->
+            <label id="card-format-wav"
+              class="cursor-pointer border-2 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-800/50 hover:border-zinc-300 dark:hover:border-zinc-700 rounded-xl p-4 transition-all block">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="font-extrabold text-base text-zinc-900 dark:text-white">WAV</span>
+                <span
+                  class="px-2 py-0.5 rounded text-[11px] font-bold bg-zinc-200 text-zinc-800 dark:bg-zinc-700 dark:text-zinc-300">PCM
+                  Linear</span>
+              </div>
+              <p class="text-xs text-zinc-600 dark:text-zinc-300 font-medium">Audio PCM tanpa kompresi (~50 MB total)
+              </p>
+              <p class="text-[11px] text-zinc-500 dark:text-zinc-400 mt-1">Standar rekaman mentah studio, ukuran
+                download lebih besar</p>
+              <input type="radio" name="audio-format" value="wav" class="sr-only">
+            </label>
+          </div>
+        </div>
+
+        <!-- Quota Warning Disclaimer -->
+        <div
+          class="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900/60 rounded-xl p-4 flex items-start gap-3 mb-6">
+          <i data-lucide="info" class="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5"></i>
+          <div class="text-xs sm:text-sm text-blue-950 dark:text-blue-200 space-y-1">
+            <div class="font-bold">Predownload Audio:</div>
+            <p class="text-xs opacity-90 leading-relaxed">
+              <strong>Seluruh 10 lagu (30 file audio) di-download penuh ke
+                memori RAM dulu</strong> sebelum tes dimulai.
+            </p>
+            <p class="font-bold text-xs pt-0.5" id="quota-estimate-text">
+              Estimasi Data: ~30 MB s/d 35 MB (Format FLAC).
+            </p>
+          </div>
+        </div>
+
+        <!-- Start CTA Button -->
+        <button id="btn-start-test"
+          class="w-full py-4 px-6 bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-extrabold rounded-xl shadow-lg shadow-brand-500/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2 text-base">
+          <i data-lucide="play" class="w-5 h-5 fill-current"></i>
+          <span>Mulai Tes (10 Lagu)</span>
+        </button>
+
+
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SCREEN 2: PRELOAD PROGRESS                               -->
+    <!-- ======================================================== -->
+    <section id="screen-preload" class="hidden space-y-6">
+      <div
+        class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 sm:p-8 shadow-xl text-center space-y-6">
+
+        <!-- Radar / Spinner -->
+        <div class="flex flex-col items-center justify-center space-y-3">
+          <div
+            class="w-16 h-16 rounded-2xl bg-brand-50 dark:bg-brand-950/60 border border-brand-200 dark:border-brand-800 flex items-center justify-center text-brand-600 dark:text-brand-400">
+            <i data-lucide="download-cloud" class="w-8 h-8 animate-bounce"></i>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-extrabold text-zinc-900 dark:text-white">Menyiapkan Lagu Pengujian</h2>
+          <p class="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 max-w-md">
+            Memuat 30 file audio langsung ke RAM browser agar pergantian sampel instan tanpa buffering.
+          </p>
+        </div>
+
+        <!-- Progress Box -->
+        <div
+          class="bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 sm:p-5 text-left space-y-3">
+          <div class="flex items-center justify-between text-xs sm:text-sm font-bold">
+            <span id="preload-status-label" class="text-zinc-800 dark:text-zinc-200">Menghubungkan ke server
+              audio...</span>
+            <span id="preload-percentage" class="text-brand-600 dark:text-brand-400 font-extrabold">0%</span>
+          </div>
+
+          <!-- Progress Bar Track -->
+          <div class="w-full h-3 bg-zinc-200 dark:bg-zinc-700/80 rounded-full overflow-hidden">
+            <div id="preload-progress-fill"
+              class="h-full bg-gradient-to-r from-brand-600 to-indigo-500 transition-all duration-150 rounded-full w-0">
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-xs text-zinc-500 dark:text-zinc-400">
+            <span id="preload-bytes-info">0.0 MB / 0.0 MB</span>
+            <span id="preload-items-count">0 / 40 file</span>
+          </div>
+        </div>
+
+        <!-- Current File Download Badge -->
+        <div
+          class="bg-zinc-50 dark:bg-zinc-800/40 border border-zinc-200 dark:border-zinc-800 rounded-xl px-4 py-2.5 flex items-center gap-2.5 text-left">
+          <i data-lucide="music" class="w-4 h-4 text-brand-600 dark:text-brand-400 shrink-0"></i>
+          <span id="preload-current-file" class="text-xs text-zinc-700 dark:text-zinc-300 font-medium truncate">
+            Mengambil 10 lagu acak dari katalog...
+          </span>
+        </div>
+
+        <!-- 10 Selected Songs List -->
+        <div class="text-left space-y-2">
+          <div
+            class="text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 flex items-center gap-1.5">
+            <i data-lucide="list-music" class="w-4 h-4"></i>
+            <span>Daftar 10 Lagu Terpilih</span>
+          </div>
+
+          <div id="preload-song-list"
+            class="max-h-56 overflow-y-auto divide-y divide-zinc-200 dark:divide-zinc-800 bg-zinc-50 dark:bg-zinc-800/30 border border-zinc-200 dark:border-zinc-800 rounded-xl">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <p class="text-xs text-zinc-400 dark:text-zinc-500 flex items-center justify-center gap-1.5">
+          <i data-lucide="shield-check" class="w-4 h-4"></i>
+          <span>Audio tersimpan sementara di RAM browser dan otomatis bersih saat tab ditutup.</span>
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SCREEN 3: BLIND TEST STAGE & AUDIO PLAYER                -->
+    <!-- ======================================================== -->
+    <section id="screen-test" class="hidden space-y-4">
+
+      <!-- Top Status Nav -->
+      <div
+        class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-3 flex items-center justify-between shadow-sm">
+        <div class="flex items-center gap-2">
+          <span id="round-indicator" class="px-2.5 py-1 rounded-md text-xs font-bold bg-brand-600 text-white">
+            Lagu 1 dari 10
+          </span>
+          <span id="current-score-tracker" class="text-xs font-bold text-zinc-700 dark:text-zinc-300">
+            Skor: 0 Benar
+          </span>
+        </div>
+
+        <!-- 10 Steps Dots -->
+        <div class="flex items-center gap-1.5" id="round-dots">
+          <!-- 10 dots populated by JS -->
+        </div>
+      </div>
+
+      <!-- Main Stage Card -->
+      <div
+        class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5 sm:p-7 shadow-xl space-y-5">
+
+        <!-- Track Stage (Cover + Ambient Glow + Titles) -->
+        <div class="text-center space-y-3">
+          <div class="relative w-40 h-40 sm:w-44 sm:h-44 mx-auto">
+            <div id="cover-backdrop"
+              class="absolute inset-2 rounded-2xl bg-cover bg-center blur-xl opacity-40 -z-10 transition-all"></div>
+            <img id="test-cover-img" src="" alt="Album Cover"
+              class="w-full h-full object-cover rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-xl mx-auto">
+          </div>
+
+          <div>
+            <h3 id="test-song-title" class="font-extrabold text-lg sm:text-xl text-zinc-900 dark:text-white truncate">
+              Judul Lagu
+            </h3>
+            <p id="test-song-artist" class="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 truncate mt-0.5">
+              Nama Artis
+            </p>
+          </div>
+        </div>
+
+        <!-- DENGARKAN & PILIH SAMPEL (A, B, C) -->
+        <div class="space-y-2">
+          <div class="flex items-center justify-between text-xs">
+            <div class="font-bold text-zinc-700 dark:text-zinc-300 flex items-center gap-1.5">
+              <i data-lucide="volume-2" class="w-4 h-4 text-brand-600 dark:text-brand-400"></i>
+              <span>Dengarkan & Bandingkan Sampel:</span>
+            </div>
+            <span class="text-zinc-400">Pilih sampel yang paling jernih</span>
+          </div>
+
+          <!-- 3 Sample Switcher Buttons (Pure large letters A, B, C without redundant sublabels) -->
+          <div class="grid grid-cols-3 gap-2.5 sm:gap-4">
+            <button id="btn-sample-A" data-sample="A"
+              class="sample-btn py-4 px-2 rounded-xl font-bold flex items-center justify-center border-2 border-brand-500 bg-brand-600 text-white shadow-md shadow-brand-500/25 transition-all">
+              <span class="text-2xl sm:text-3xl font-black tracking-wider leading-none">A</span>
+            </button>
+
+            <button id="btn-sample-B" data-sample="B"
+              class="sample-btn py-4 px-2 rounded-xl font-bold flex items-center justify-center border-2 border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-800/60 text-zinc-700 dark:text-zinc-300 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all">
+              <span class="text-2xl sm:text-3xl font-black tracking-wider leading-none">B</span>
+            </button>
+
+            <button id="btn-sample-C" data-sample="C"
+              class="sample-btn py-4 px-2 rounded-xl font-bold flex items-center justify-center border-2 border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-800/60 text-zinc-700 dark:text-zinc-300 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all">
+              <span class="text-2xl sm:text-3xl font-black tracking-wider leading-none">C</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Player Transport Dock -->
+        <div
+          class="bg-zinc-50 dark:bg-zinc-800/40 border border-zinc-200 dark:border-zinc-800 rounded-xl p-3.5 space-y-3">
+          <!-- Timeline Slider -->
+          <div class="flex items-center gap-2 text-xs font-semibold text-zinc-500 dark:text-zinc-400">
+            <span id="time-current" class="tabular-nums w-8">0:00</span>
+            <input type="range" id="seek-bar" min="0" max="10" step="0.05" value="0" class="flex-1 cursor-pointer">
+            <span id="time-total" class="tabular-nums w-8 text-right">0:10</span>
+          </div>
+
+          <!-- Controls Bar -->
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <button id="btn-replay"
+                class="p-2 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-600 dark:text-zinc-400 transition"
+                title="Ulangi dari 0:00">
+                <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+              </button>
+              <button id="btn-play-pause"
+                class="w-11 h-11 rounded-full bg-brand-600 hover:bg-brand-500 text-white flex items-center justify-center shadow-md shadow-brand-500/30 transition transform hover:scale-105"
+                title="Putar / Jeda (Spasi)">
+                <i data-lucide="play" id="play-icon" class="w-5 h-5 ml-0.5"></i>
+                <i data-lucide="pause" id="pause-icon" class="w-5 h-5 hidden"></i>
+              </button>
+              <button id="btn-loop-toggle"
+                class="p-2 rounded-lg bg-brand-100 dark:bg-brand-950/80 text-brand-700 dark:text-brand-300 border border-brand-200 dark:border-brand-800 transition"
+                title="Looping Otomatis">
+                <i data-lucide="repeat" class="w-4 h-4"></i>
+              </button>
+            </div>
+
+            <!-- Volume Control -->
+            <div class="flex items-center gap-2">
+              <button id="btn-mute-toggle"
+                class="p-2 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-600 dark:text-zinc-400 transition"
+                title="Mute/Unmute">
+                <i data-lucide="volume-2" id="volume-icon" class="w-4 h-4"></i>
+              </button>
+              <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="1"
+                class="w-16 sm:w-20 cursor-pointer">
+            </div>
+          </div>
+
+          <div class="text-[11px] text-center text-zinc-400 dark:text-zinc-500 pt-0.5">
+            Pintasan: [1] [2] [3] Ganti Sampel • [Spasi] Putar/Jeda • [L] Loop • [Enter] Kunci Jawaban
+          </div>
+        </div>
+
+        <!-- Lock Answer Button -->
+        <div id="lock-answer-container">
+          <button id="btn-lock-answer"
+            class="w-full py-3.5 px-6 bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-extrabold rounded-xl shadow-lg shadow-brand-500/20 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2 text-sm sm:text-base">
+            <i data-lucide="lock" class="w-4 h-4"></i>
+            <span id="btn-lock-text">Kunci Jawaban (Sampel A)</span>
+          </button>
+        </div>
+
+        <!-- Reveal Result Box (Appears after answer is locked) -->
+        <div id="answer-reveal-box"
+          class="hidden border-2 border-emerald-500 bg-emerald-50/60 dark:bg-emerald-950/30 rounded-xl p-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div id="reveal-icon-wrap"
+              class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 flex items-center justify-center shrink-0">
+              <i data-lucide="check" id="reveal-icon-check" class="w-6 h-6"></i>
+              <i data-lucide="x" id="reveal-icon-cross" class="w-6 h-6 hidden"></i>
+            </div>
+            <div>
+              <h4 id="reveal-title" class="font-extrabold text-base text-zinc-900 dark:text-white">Tepat Sekali!</h4>
+              <p id="reveal-desc" class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 mt-0.5">Sampel
+                terverifikasi sebagai format Lossless.</p>
+            </div>
+          </div>
+
+          <!-- Format Identity Breakdown -->
+          <div class="grid grid-cols-3 gap-2">
+            <div id="identity-A"
+              class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg p-2.5 text-center">
+              <div class="text-[11px] font-bold text-zinc-500">Sampel A</div>
+              <div id="reveal-format-A"
+                class="font-extrabold text-xs sm:text-sm mt-0.5 text-zinc-800 dark:text-zinc-200">-</div>
+            </div>
+            <div id="identity-B"
+              class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg p-2.5 text-center">
+              <div class="text-[11px] font-bold text-zinc-500">Sampel B</div>
+              <div id="reveal-format-B"
+                class="font-extrabold text-xs sm:text-sm mt-0.5 text-zinc-800 dark:text-zinc-200">-</div>
+            </div>
+            <div id="identity-C"
+              class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg p-2.5 text-center">
+              <div class="text-[11px] font-bold text-zinc-500">Sampel C</div>
+              <div id="reveal-format-C"
+                class="font-extrabold text-xs sm:text-sm mt-0.5 text-zinc-800 dark:text-zinc-200">-</div>
+            </div>
+          </div>
+
+          <button id="btn-next-song"
+            class="w-full py-3 px-5 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-extrabold rounded-xl hover:opacity-90 transition flex items-center justify-center gap-2 text-sm">
+            <span>Lagu Berikutnya</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SCREEN 4: RESULTS & SCORECARD                            -->
+    <!-- ======================================================== -->
+    <section id="screen-results" class="hidden space-y-6">
+      <div
+        class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 sm:p-8 shadow-xl text-center space-y-6">
+
+        <!-- Score Celebration Hero -->
+        <div class="space-y-3">
+          <div id="result-rank-icon" class="text-5xl">🏆</div>
+          <div id="result-rank-title"
+            class="inline-flex px-3.5 py-1 rounded-md text-xs sm:text-sm font-extrabold bg-brand-100 text-brand-800 dark:bg-brand-950 dark:text-brand-300 border border-brand-200 dark:border-brand-800">
+            Pendengar Kritis
+          </div>
+          <h2 id="result-score-text"
+            class="text-4xl sm:text-5xl font-black tracking-tight text-zinc-900 dark:text-white">
+            8 / 10
+          </h2>
+          <p id="result-accuracy-text" class="text-sm font-bold text-brand-600 dark:text-brand-400">
+            Tingkat Akurasi: 80%
+          </p>
+          <p id="result-rank-desc"
+            class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 max-w-md mx-auto leading-relaxed">
+            Hebat! Pendengaranmu sangat tajam mengenali perbedaan kualitas audio.
+          </p>
+        </div>
+
+        <!-- 3 Stats Columns -->
+        <div class="grid grid-cols-3 gap-2.5 sm:gap-3">
+          <div class="bg-zinc-50 dark:bg-zinc-800/40 border border-zinc-200 dark:border-zinc-800 rounded-xl p-3.5">
+            <div id="stat-correct" class="text-2xl font-black text-emerald-600 dark:text-emerald-400">8</div>
+            <div class="text-[11px] sm:text-xs font-bold text-zinc-700 dark:text-zinc-300 mt-1">Tebakan Tepat</div>
+          </div>
+          <div class="bg-zinc-50 dark:bg-zinc-800/40 border border-zinc-200 dark:border-zinc-800 rounded-xl p-3.5">
+            <div id="stat-mp3-320" class="text-2xl font-black text-amber-600 dark:text-amber-400">2</div>
+            <div class="text-[11px] sm:text-xs font-bold text-zinc-700 dark:text-zinc-300 mt-1">Terkecoh 320k</div>
+          </div>
+          <div class="bg-zinc-50 dark:bg-zinc-800/40 border border-zinc-200 dark:border-zinc-800 rounded-xl p-3.5">
+            <div id="stat-mp3-128" class="text-2xl font-black text-rose-600 dark:text-rose-400">0</div>
+            <div class="text-[11px] sm:text-xs font-bold text-zinc-700 dark:text-zinc-300 mt-1">Terkecoh 128k</div>
+          </div>
+        </div>
+
+        <!-- Review List -->
+        <div class="text-left space-y-2">
+          <div
+            class="text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 flex items-center gap-1.5">
+            <i data-lucide="list-music" class="w-4 h-4"></i>
+            <span>Rincian 10 Lagu Uji</span>
+          </div>
+
+          <div id="results-song-list"
+            class="max-h-64 overflow-y-auto divide-y divide-zinc-200 dark:divide-zinc-800 bg-zinc-50 dark:bg-zinc-800/30 border border-zinc-200 dark:border-zinc-800 rounded-xl">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Action Button -->
+        <div class="pt-2">
+          <button id="btn-restart-test"
+            class="w-full py-4 px-6 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-extrabold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lg shadow-brand-500/25 transition">
+            <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+            <span>Coba Tes Lagi (10 Lagu Acak)</span>
+          </button>
+        </div>
+
+
+      </div>
+    </section>
+
+  </main>
+
+
+
+  <!-- Toast Notification Bar -->
+  <div id="toast"
+    class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-24 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-5 py-3 rounded-xl shadow-2xl flex items-center gap-2.5 text-xs sm:text-sm font-bold z-50 transition-all duration-300 opacity-0 pointer-events-none">
+    <i data-lucide="check" class="w-4 h-4 text-emerald-400 dark:text-emerald-600"></i>
+    <span id="toast-message">Hasil berhasil disalin ke clipboard!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="songs.data.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
