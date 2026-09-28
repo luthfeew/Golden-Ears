@@ -165,14 +165,11 @@
           <i data-lucide="audio-lines" class="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5"></i>
           <div class="text-xs sm:text-sm text-emerald-950 dark:text-emerald-200 leading-relaxed space-y-1">
             <div class="font-bold flex items-center gap-2">
-              <span>Sumber Audio Master 24-bit Asli</span>
-              <span
-                class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-200/80 dark:bg-emerald-900 text-emerald-900 dark:text-emerald-100 uppercase tracking-wide">Studio
-                Quality</span>
+              <span>Sumber Audio 24-bit</span>
             </div>
             <p class="text-xs opacity-90 leading-relaxed">
-              Semua audio pada pengujian ini bersumber langsung dari file master studio asli <strong>24-bit</strong>.
-              Baik format Lossless maupun MP3 (320k & 128k) diekspor langsung dari sumber 24-bit yang sama agar
+              Semua audio pada pengujian ini bersumber langsung dari file master <strong>24-bit</strong>.
+              Format MP3 (320k & 128k) diekspor langsung dari sumber 24-bit yang sama agar
               pengujian komparasi berjalan objektif dan akurat.
             </p>
           </div>
@@ -192,14 +189,14 @@
         <div
           class="bg-zinc-50 dark:bg-zinc-800/40 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 sm:p-5 mb-6">
           <div class="flex items-center justify-between mb-3">
-            <h3 class="font-bold text-sm text-zinc-900 dark:text-white">Pilih Format Lossless Acuan</h3>
+            <h3 class="font-bold text-sm text-zinc-900 dark:text-white">Pilih Format Acuan</h3>
 
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="format-options">
             <!-- FLAC Card -->
             <label id="card-format-flac"
-              class="cursor-pointer border-2 border-brand-500 bg-brand-50/50 dark:bg-brand-950/40 rounded-xl p-4 transition-all block">
+              class="cursor-pointer border-2 border-brand-500 hover:border-brand-500 bg-brand-50/50 dark:bg-brand-950/40 rounded-xl p-4 transition-all block">
               <div class="flex items-center justify-between mb-1.5">
                 <span class="font-extrabold text-base text-zinc-900 dark:text-white">FLAC (24-bit)</span>
                 <span
@@ -238,7 +235,7 @@
           <div class="text-xs sm:text-sm text-blue-950 dark:text-blue-200 space-y-1">
             <div class="font-bold">Predownload Audio:</div>
             <p class="text-xs opacity-90 leading-relaxed">
-              <strong>Seluruh 10 lagu (30 file audio) di-download penuh ke
+              <strong>Seluruh 10 lagu (30 file audio + 10 file cover) di-download penuh ke
                 memori RAM dulu</strong> sebelum tes dimulai.
             </p>
             <p class="font-bold text-xs pt-0.5" id="quota-estimate-text">
@@ -341,9 +338,6 @@
         <div class="flex items-center gap-2">
           <span id="round-indicator" class="px-2.5 py-1 rounded-md text-xs font-bold bg-brand-600 text-white">
             Lagu 1 dari 10
-          </span>
-          <span id="current-score-tracker" class="text-xs font-bold text-zinc-700 dark:text-zinc-300">
-            Skor: 0 Benar
           </span>
         </div>
 
@@ -448,7 +442,7 @@
             </div>
           </div>
 
-          <div class="text-[11px] text-center text-zinc-400 dark:text-zinc-500 pt-0.5">
+          <div class="hidden sm:block text-[11px] text-center text-zinc-400 dark:text-zinc-500 pt-0.5">
             Pintasan: [1] [2] [3] Ganti Sampel • [Spasi] Putar/Jeda • [L] Loop • [Enter] Kunci Jawaban
           </div>
         </div>

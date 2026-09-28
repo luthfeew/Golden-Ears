@@ -46,7 +46,7 @@
       this.volume = 1.0;
       this.isMuted = false;
       this.previousVolume = 1.0;
-      
+
       this.activeBuffers = {};        // { 'A': AudioBuffer, 'B': ..., 'C': ... }
       this.activeAudioElements = {};   // { 'A': HTMLAudioElement, 'B': ..., 'C': ... }
       this.useWebAudio = true;
@@ -150,8 +150,8 @@
         audioElem.volume = this.isMuted ? 0 : this.volume;
         try {
           audioElem.currentTime = safeOffset;
-        } catch {}
-        
+        } catch { }
+
         audioElem.play().then(() => {
           this.isPlaying = true;
           this.startTime = Date.now() / 1000 - safeOffset;
@@ -175,14 +175,14 @@
     stopCurrentPlaying() {
       // Stop Web Audio node
       if (this.sourceNode) {
-        try { this.sourceNode.stop(); } catch {}
-        try { this.sourceNode.disconnect(); } catch {}
+        try { this.sourceNode.stop(); } catch { }
+        try { this.sourceNode.disconnect(); } catch { }
         this.sourceNode = null;
       }
       // Pause all HTML5 audio elements
       Object.values(this.activeAudioElements).forEach(a => {
         if (a) {
-          try { a.pause(); } catch {}
+          try { a.pause(); } catch { }
         }
       });
     }
@@ -379,6 +379,28 @@
     return audio;
   }
 
+  // Helper to preload Image into memory (Blob URL for HTTP/HTTPS, Image element for file:///)
+  async function createPreloadedImage(url, isFileProtocol) {
+    if (!url) return 'assets/placeholder.svg';
+    if (!isFileProtocol) {
+      try {
+        const res = await fetch(url);
+        if (res.ok) {
+          const blob = await res.blob();
+          return URL.createObjectURL(blob);
+        }
+      } catch (e) {
+        console.warn('Cover fetch blob error, falling back to Image element preload:', e);
+      }
+    }
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => resolve(url);
+      img.onerror = () => resolve(url);
+      img.src = url;
+    });
+  }
+
   // ==========================================
   // 5. PRELOADING ENGINE (Multi-Protocol Resilient)
   // ==========================================
@@ -390,6 +412,12 @@
     // Pick 10 unique songs from catalog
     const shuffledCatalog = shuffle(state.catalog);
     state.testSongs = shuffledCatalog.slice(0, 10);
+    // Revoke any previous blob URLs before clearing
+    state.preloadedData.forEach(item => {
+      if (item && item.coverUrl && item.coverUrl.startsWith('blob:')) {
+        URL.revokeObjectURL(item.coverUrl);
+      }
+    });
     state.preloadedData.clear();
     state.roundsData = [];
     state.score = 0;
@@ -440,9 +468,9 @@
     const currentFileLabel = document.getElementById('preload-current-file');
     const statusLabel = document.getElementById('preload-status-label');
 
-    statusLabel.textContent = isFileProtocol 
-      ? 'Memuat audio dari file lokal...' 
-      : `Mengunduh audio pengujian (${isFlac ? 'FLAC' : 'WAV'})...`;
+    statusLabel.textContent = isFileProtocol
+      ? 'Memuat audio & sampul dari file lokal...'
+      : `Mengunduh audio & sampul pengujian (${isFlac ? 'FLAC' : 'WAV'})...`;
 
     for (let i = 0; i < state.testSongs.length; i++) {
       const song = state.testSongs[i];
@@ -462,8 +490,9 @@
       const losslessPath = isFlac ? song.flac : song.wav;
       const mp3320Path = song.mp3_320;
       const mp3128Path = song.mp3_128;
-      const coverUrl = song.cover;
+      const coverUrl = song.cover || 'assets/placeholder.svg';
 
+      let resolvedCoverUrl = coverUrl;
       const buffers = {};
       const audioElements = {
         'lossless': createPreloadedAudio(losslessPath),
@@ -471,7 +500,7 @@
         'mp3_128': createPreloadedAudio(mp3128Path)
       };
 
-      // If on HTTP/HTTPS, decode AudioBuffers via Web Audio API for seamless switching
+      // If on HTTP/HTTPS, decode AudioBuffers via Web Audio API & fetch cover image into memory
       if (!isFileProtocol && state.audioEngine.useWebAudio && state.audioEngine.ctx) {
         try {
           const fetchAndDecode = async (url) => {
@@ -481,24 +510,33 @@
             return await state.audioEngine.ctx.decodeAudioData(arr.slice(0));
           };
 
-          const [bufLossless, buf320, buf128] = await Promise.allSettled([
+          const [coverRes, bufLossless, buf320, buf128] = await Promise.allSettled([
+            createPreloadedImage(coverUrl, isFileProtocol),
             fetchAndDecode(losslessPath),
             fetchAndDecode(mp3320Path),
             fetchAndDecode(mp3128Path)
           ]);
 
+          if (coverRes.status === 'fulfilled' && coverRes.value) resolvedCoverUrl = coverRes.value;
           if (bufLossless.status === 'fulfilled') buffers['lossless'] = bufLossless.value;
           if (buf320.status === 'fulfilled') buffers['mp3_320'] = buf320.value;
           if (buf128.status === 'fulfilled') buffers['mp3_128'] = buf128.value;
         } catch (e) {
           console.warn('Web Audio decode warning, using AudioElements:', e);
         }
+      } else {
+        // Direct file:/// or fallback: preload image into memory cache
+        try {
+          resolvedCoverUrl = await createPreloadedImage(coverUrl, isFileProtocol);
+        } catch (e) {
+          console.warn('Cover preload error:', e);
+        }
       }
 
       completedFiles += 4;
-      const approxBytesPerSong = (song.coverSize || 500000) + 
-        (isFlac ? (song.flacSize || 2200000) : (song.wavSize || 3200000)) + 
-        (song.mp3_320Size || 400000) + 
+      const approxBytesPerSong = (song.coverSize || 500000) +
+        (isFlac ? (song.flacSize || 2200000) : (song.wavSize || 3200000)) +
+        (song.mp3_320Size || 400000) +
         (song.mp3_128Size || 160000);
       loadedBytes += approxBytesPerSong;
 
@@ -509,7 +547,7 @@
       if (itemsCount) itemsCount.textContent = `${completedFiles} / ${totalFiles} file`;
 
       state.preloadedData.set(song.id, {
-        coverUrl,
+        coverUrl: resolvedCoverUrl,
         buffers,
         audioElements
       });
@@ -546,8 +584,8 @@
 
     if (progressFill) progressFill.style.width = '100%';
     if (progressPct) progressPct.textContent = '100%';
-    statusLabel.textContent = 'Semua lagu siap! Membuka panggung tes...';
-    currentFileLabel.textContent = '30 file audio siap di memori RAM.';
+    statusLabel.textContent = 'Semua lagu & sampul siap! Membuka panggung tes...';
+    currentFileLabel.textContent = '30 file audio & 10 sampul siap di memori RAM.';
 
     setTimeout(() => {
       startBlindTest();
@@ -572,9 +610,6 @@
     // Update Round Headers & Trackers
     const roundIndicator = document.getElementById('round-indicator');
     if (roundIndicator) roundIndicator.textContent = `Lagu ${index + 1} dari 10`;
-
-    const scoreTracker = document.getElementById('current-score-tracker');
-    if (scoreTracker) scoreTracker.textContent = `Skor: ${state.score} Benar`;
 
     // Render Round Dots
     const dotsContainer = document.getElementById('round-dots');
@@ -712,7 +747,7 @@
       if (isMuted || vol === 0) iconName = 'volume-x';
       else if (vol < 0.5) iconName = 'volume-1';
       else iconName = 'volume-2';
-      
+
       icon.setAttribute('data-lucide', iconName);
       if (window.lucide) window.lucide.createIcons();
     }
@@ -811,9 +846,6 @@
     }
 
     if (revealBox) revealBox.classList.remove('hidden');
-
-    const scoreTracker = document.getElementById('current-score-tracker');
-    if (scoreTracker) scoreTracker.textContent = `Skor: ${state.score} Benar`;
 
     if (window.lucide) window.lucide.createIcons();
   }
@@ -947,37 +979,29 @@
 
     function updateFormatCards(selected) {
       state.selectedFormat = selected;
-      const activeClass = ['border-brand-500', 'bg-brand-50/50', 'dark:bg-brand-950/40'];
-      const inactiveClass = ['border-zinc-200', 'dark:border-zinc-800', 'bg-white', 'dark:bg-zinc-800/50'];
+      const activeClass = ['border-brand-500', 'hover:border-brand-500', 'bg-brand-50/50', 'dark:bg-brand-950/40'];
+      const inactiveClass = ['border-zinc-200', 'dark:border-zinc-800', 'bg-white', 'dark:bg-zinc-800/50', 'hover:border-zinc-300', 'dark:hover:border-zinc-700'];
 
-      if (selected === 'flac') {
-        if (cardFlac) {
-          cardFlac.classList.add(...activeClass);
-          cardFlac.classList.remove(...inactiveClass);
-          const r = cardFlac.querySelector('input[type="radio"]');
-          if (r) r.checked = true;
+      const applyCardState = (card, isActive) => {
+        if (!card) return;
+        if (isActive) {
+          card.classList.remove(...inactiveClass);
+          card.classList.add(...activeClass);
+        } else {
+          card.classList.remove(...activeClass);
+          card.classList.add(...inactiveClass);
         }
-        if (cardWav) {
-          cardWav.classList.remove(...activeClass);
-          cardWav.classList.add(...inactiveClass);
-          const r = cardWav.querySelector('input[type="radio"]');
-          if (r) r.checked = false;
-        }
-        if (quotaEstimateText) quotaEstimateText.textContent = 'Estimasi Data: ~30 MB s/d 35 MB (Format FLAC).';
-      } else {
-        if (cardWav) {
-          cardWav.classList.add(...activeClass);
-          cardWav.classList.remove(...inactiveClass);
-          const r = cardWav.querySelector('input[type="radio"]');
-          if (r) r.checked = true;
-        }
-        if (cardFlac) {
-          cardFlac.classList.remove(...activeClass);
-          cardFlac.classList.add(...inactiveClass);
-          const r = cardFlac.querySelector('input[type="radio"]');
-          if (r) r.checked = false;
-        }
-        if (quotaEstimateText) quotaEstimateText.textContent = 'Estimasi Data: ~45 MB s/d 55 MB (Format WAV).';
+        const r = card.querySelector('input[type="radio"]');
+        if (r) r.checked = isActive;
+      };
+
+      applyCardState(cardFlac, selected === 'flac');
+      applyCardState(cardWav, selected === 'wav');
+
+      if (quotaEstimateText) {
+        quotaEstimateText.textContent = selected === 'flac'
+          ? 'Estimasi Data: ~30 MB s/d 35 MB (Format FLAC).'
+          : 'Estimasi Data: ~45 MB s/d 55 MB (Format WAV).';
       }
     }
 
