@@ -114,7 +114,7 @@
             Seberapa Peka Pendengaranmu?
           </h2>
           <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 max-w-xl mx-auto leading-relaxed">
-            Uji telingamu membedakan audio kualitas master murni (<strong>Lossless FLAC/WAV</strong>) dari format
+            Uji telingamu membedakan audio kualitas master murni (<strong>Lossless FLAC/WAV 24-bit</strong>) dari format
             kompresi (<strong>MP3 320 kbps & 128 kbps</strong>) lewat 10 lagu acak.
           </p>
         </div>
@@ -159,6 +159,24 @@
           </div>
         </div>
 
+        <!-- 24-Bit Studio Master Source Notice -->
+        <div
+          class="bg-emerald-50/70 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/60 rounded-xl p-4 flex items-start gap-3 mb-4">
+          <div
+            class="w-7 h-7 rounded-lg bg-emerald-100 dark:bg-emerald-900/60 flex items-center justify-center shrink-0 text-emerald-700 dark:text-emerald-300 font-extrabold text-[11px] mt-0.5">
+            24b
+          </div>
+          <div class="text-xs sm:text-sm text-emerald-950 dark:text-emerald-200 leading-relaxed space-y-1">
+            <div class="font-bold flex items-center gap-2">
+              <span>Sumber Audio Master 24-bit Asli</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-200/80 dark:bg-emerald-900 text-emerald-900 dark:text-emerald-100 uppercase tracking-wide">Studio Quality</span>
+            </div>
+            <p class="text-xs opacity-90 leading-relaxed">
+              Semua audio pada pengujian ini bersumber langsung dari file master studio asli <strong>24-bit</strong> (bukan hasil upscale dari MP3 atau CD 16-bit). Baik format Lossless maupun MP3 (320k & 128k) diekspor langsung dari sumber 24-bit yang sama agar pengujian komparasi berjalan objektif dan akurat.
+            </p>
+          </div>
+        </div>
+
         <!-- Listening Recommendation Notice -->
         <div
           class="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/60 rounded-xl p-4 flex items-start gap-3 mb-6">
@@ -182,11 +200,11 @@
             <label id="card-format-flac"
               class="cursor-pointer border-2 border-brand-500 bg-brand-50/50 dark:bg-brand-950/40 rounded-xl p-4 transition-all block">
               <div class="flex items-center justify-between mb-1.5">
-                <span class="font-extrabold text-base text-zinc-900 dark:text-white">FLAC</span>
+                <span class="font-extrabold text-base text-zinc-900 dark:text-white">FLAC (24-bit)</span>
                 <span
                   class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">Direkomendasikan</span>
               </div>
-              <p class="text-xs text-zinc-600 dark:text-zinc-300 font-medium">Lossless terkompresi (~30 MB total)</p>
+              <p class="text-xs text-zinc-600 dark:text-zinc-300 font-medium">Lossless terkompresi 24-bit (~30 MB total)</p>
               <p class="text-[11px] text-zinc-500 dark:text-zinc-400 mt-1">Kompatibel di semua browser, download cepat
                 dan hemat data</p>
               <input type="radio" name="audio-format" value="flac" class="sr-only" checked>
@@ -196,12 +214,12 @@
             <label id="card-format-wav"
               class="cursor-pointer border-2 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-800/50 hover:border-zinc-300 dark:hover:border-zinc-700 rounded-xl p-4 transition-all block">
               <div class="flex items-center justify-between mb-1.5">
-                <span class="font-extrabold text-base text-zinc-900 dark:text-white">WAV</span>
+                <span class="font-extrabold text-base text-zinc-900 dark:text-white">WAV (24-bit)</span>
                 <span
                   class="px-2 py-0.5 rounded text-[11px] font-bold bg-zinc-200 text-zinc-800 dark:bg-zinc-700 dark:text-zinc-300">PCM
                   Linear</span>
               </div>
-              <p class="text-xs text-zinc-600 dark:text-zinc-300 font-medium">Audio PCM tanpa kompresi (~50 MB total)
+              <p class="text-xs text-zinc-600 dark:text-zinc-300 font-medium">Audio PCM Linear 24-bit mentah (~50 MB total)
               </p>
               <p class="text-[11px] text-zinc-500 dark:text-zinc-400 mt-1">Standar rekaman mentah studio, ukuran
                 download lebih besar</p>

@@ -1,6 +1,6 @@
 # Golden Ears — Blind Audio Test
 
-Uji kepekaan telinga Anda secara objektif dalam membedakan format audio berkualitas master murni (**Lossless FLAC/WAV**) melawan kompresi perseptual (**MP3 320 kbps & MP3 128 kbps**) melalui 10 lagu acak.
+Uji kepekaan telinga Anda secara objektif dalam membedakan format audio berkualitas master murni (**Lossless FLAC/WAV 24-bit**) melawan kompresi perseptual (**MP3 320 kbps & MP3 128 kbps**) melalui 10 lagu acak.
 
 Aplikasi ini **100% statis (client-side)** dan siap di-host langsung di **GitHub Pages** tanpa memerlukan backend atau database server.
 
@@ -9,9 +9,10 @@ Aplikasi ini **100% statis (client-side)** dan siap di-host langsung di **GitHub
 ## Fitur Utama
 
 - **100% Static & Serverless**: Berjalan sepenuhnya di peramban (client-side) menggunakan file audio lokal, `songs.json`, dan fallback embedded `songs.data.js`.
+- **Master 24-Bit Hi-Res Quality**: Seluruh sampel audio bersumber langsung dari master rekaman studio 24-bit asli (bukan hasil upscale).
 - **Seamless Switching (Web Audio API)**: Beralih instan antara Sampel A, B, dan C pada posisi waktu pemutaran yang sama persis tanpa jeda atau klik audio (*sample-accurate playhead sync*).
 - **RAM Preloading (Bebas Lag & Adil)**: Seluruh 30 berkas audio untuk 10 lagu diunduh penuh ke memori RAM sebelum pengujian dimulai, guna menghilangkan bias latensi transmisi jaringan.
-- **Pilihan Format Lossless Acuan**: Mendukung format **FLAC** (~30 MB total, hemat data) dan **WAV** (~50 MB total, audio PCM tanpa kompresi).
+- **Pilihan Format Lossless Acuan**: Mendukung format **FLAC 24-bit** (~30 MB total, hemat data) dan **WAV 24-bit** (~50 MB total, audio PCM tanpa kompresi).
 - **Desain Modern & Responsif**: Dibangun dengan Tailwind CSS v3, Plus Jakarta Sans, dan Lucide Icons dengan dukungan mode Gelap (*Dark Mode*) dan Terang (*Light Mode*).
 - **Laporan Skor & Ambang Dengar**: Memberikan evaluasi akurasi instan di setiap nomor dan rapor akhir klasifikasi resolusi auditori.
 
