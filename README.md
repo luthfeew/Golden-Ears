@@ -25,7 +25,7 @@ Golden Ears/
 ├── index.html            # Antarmuka web utama
 ├── style.css             # Penataan Companion CSS & typography
 ├── app.js                # Logika Audio Engine, state management, & interaksi
-├── songs.json            # Katalog 54 lagu beserta metadata
+├── songs.json            # Katalog 113 lagu beserta metadata
 ├── songs.data.js         # Fallback data katalog untuk protokol file:///
 ├── .nojekyll             # Menjamin GitHub Pages memuat seluruh aset tanpa filter Jekyll
 ├── assets/

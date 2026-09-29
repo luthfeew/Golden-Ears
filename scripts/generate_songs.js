@@ -19,11 +19,11 @@ for (let i = 0; i < entries.length; i++) {
   const folderPath = path.join(songsDir, folderName);
   const files = fs.readdirSync(folderPath);
 
-  const flacFile = files.find(f => f === 'lossless.flac' || f.endsWith('_lossless.flac'));
-  const wavFile = files.find(f => f === 'uncompressed.wav' || f.endsWith('_uncompressed.wav'));
-  const mp3_320File = files.find(f => f === 'mp3_320k.mp3' || f.endsWith('_mp3_320k.mp3'));
-  const mp3_128File = files.find(f => f === 'mp3_128k.mp3' || f.endsWith('_mp3_128k.mp3'));
-  const coverFile = files.find(f => f.startsWith('cover.'));
+  const flacFile = files.find(f => f.toLowerCase() === 'lossless.flac' || f.toLowerCase().endsWith('_lossless.flac'));
+  const wavFile = files.find(f => f.toLowerCase() === 'uncompressed.wav' || f.toLowerCase().endsWith('_uncompressed.wav'));
+  const mp3_320File = files.find(f => f.toLowerCase() === 'mp3_320k.mp3' || f.toLowerCase().endsWith('_mp3_320k.mp3'));
+  const mp3_128File = files.find(f => f.toLowerCase() === 'mp3_128k.mp3' || f.toLowerCase().endsWith('_mp3_128k.mp3'));
+  const coverFile = files.find(f => f.toLowerCase().startsWith('cover.'));
 
   if (!flacFile || !wavFile || !mp3_320File || !mp3_128File || !coverFile) {
     console.warn(`Skipping incomplete folder: ${folderName}`);
@@ -48,7 +48,7 @@ for (let i = 0; i < entries.length; i++) {
   };
 
   songs.push({
-    id: `song_${String(i + 1).padStart(3, '0')}`,
+    id: `song_${String(songs.length + 1).padStart(3, '0')}`,
     folder: folderName,
     title,
     artist,

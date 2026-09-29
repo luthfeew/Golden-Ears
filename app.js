@@ -12,7 +12,7 @@
   // 1. DATA & APP STATE
   // ==========================================
   const state = {
-    catalog: [],              // 54 songs catalog
+    catalog: [],              // Song catalog
     selectedFormat: 'flac',   // 'flac' | 'wav'
     testSongs: [],            // 10 chosen songs for current test
     preloadedData: new Map(), // song.id -> { coverUrl, buffers: {}, audioElements: {} }
@@ -41,7 +41,7 @@
       this.isPlaying = false;
       this.startTime = 0;
       this.pausedAt = 0;
-      this.duration = 10.0;
+      this.duration = 12.0;
       this.isLooping = true;
       this.volume = 1.0;
       this.isMuted = false;
@@ -100,7 +100,7 @@
       } else if (this.activeAudioElements['A'] && !isNaN(this.activeAudioElements['A'].duration) && this.activeAudioElements['A'].duration > 0) {
         this.duration = this.activeAudioElements['A'].duration;
       } else {
-        this.duration = 10.0;
+        this.duration = 12.0;
       }
     }
 
@@ -112,7 +112,7 @@
 
       const buffer = this.activeBuffers[this.currentSample];
       const audioElem = this.activeAudioElements[this.currentSample];
-      const safeDuration = (!isNaN(this.duration) && this.duration > 0) ? this.duration : 10.0;
+      const safeDuration = (!isNaN(this.duration) && this.duration > 0) ? this.duration : 12.0;
       const safeOffset = Math.max(0, Math.min(offset, safeDuration - 0.05));
 
       // Strategy A: Web Audio API (if buffer is decoded)
@@ -175,6 +175,7 @@
     stopCurrentPlaying() {
       // Stop Web Audio node
       if (this.sourceNode) {
+        this.sourceNode.onended = null;
         try { this.sourceNode.stop(); } catch { }
         try { this.sourceNode.disconnect(); } catch { }
         this.sourceNode = null;
@@ -255,14 +256,14 @@
       const currentPlayhead = this.getCurrentTime();
       this.currentSample = sampleKey;
 
-      // Update current round choice directly
+      // Update current round choice directly ONLY if not locked yet
       const currentRound = state.roundsData[state.currentRoundIndex];
-      if (currentRound) {
+      if (currentRound && !currentRound.isLocked) {
         currentRound.userChoice = sampleKey;
-      }
-      const lockBtnText = document.getElementById('btn-lock-text');
-      if (lockBtnText) {
-        lockBtnText.textContent = `Kunci Jawaban (Sampel ${sampleKey})`;
+        const lockBtnText = document.getElementById('btn-lock-text');
+        if (lockBtnText) {
+          lockBtnText.textContent = `Kunci Jawaban (Sampel ${sampleKey})`;
+        }
       }
 
       // Always play when user explicitly taps Sample A, B, or C!
@@ -404,8 +405,11 @@
   // ==========================================
   // 5. PRELOADING ENGINE (Multi-Protocol Resilient)
   // ==========================================
+  let preloadCancellationToken = 0;
+
   async function startPreloadProcess() {
     showScreen('screen-preload');
+    const currentToken = ++preloadCancellationToken;
 
     const isFileProtocol = window.location.protocol === 'file:';
 
@@ -473,6 +477,8 @@
       : `Mengunduh audio & sampul pengujian (${isFlac ? 'FLAC' : 'WAV'})...`;
 
     for (let i = 0; i < state.testSongs.length; i++) {
+      if (currentToken !== preloadCancellationToken) return;
+
       const song = state.testSongs[i];
       const songRow = document.getElementById(`preload-item-${song.id}`);
       const songContainer = document.getElementById(`icon-container-${song.id}`);
@@ -494,13 +500,9 @@
 
       let resolvedCoverUrl = coverUrl;
       const buffers = {};
-      const audioElements = {
-        'lossless': createPreloadedAudio(losslessPath),
-        'mp3_320': createPreloadedAudio(mp3320Path),
-        'mp3_128': createPreloadedAudio(mp3128Path)
-      };
+      const audioElements = {};
 
-      // If on HTTP/HTTPS, decode AudioBuffers via Web Audio API & fetch cover image into memory
+      // If on HTTP/HTTPS, decode AudioBuffers via Web Audio API directly into RAM
       if (!isFileProtocol && state.audioEngine.useWebAudio && state.audioEngine.ctx) {
         try {
           const fetchAndDecode = async (url) => {
@@ -519,19 +521,32 @@
 
           if (coverRes.status === 'fulfilled' && coverRes.value) resolvedCoverUrl = coverRes.value;
           if (bufLossless.status === 'fulfilled') buffers['lossless'] = bufLossless.value;
+          else audioElements['lossless'] = createPreloadedAudio(losslessPath);
+
           if (buf320.status === 'fulfilled') buffers['mp3_320'] = buf320.value;
+          else audioElements['mp3_320'] = createPreloadedAudio(mp3320Path);
+
           if (buf128.status === 'fulfilled') buffers['mp3_128'] = buf128.value;
+          else audioElements['mp3_128'] = createPreloadedAudio(mp3128Path);
         } catch (e) {
-          console.warn('Web Audio decode warning, using AudioElements:', e);
+          console.warn('Web Audio decode warning, using AudioElements fallback:', e);
+          if (!buffers['lossless']) audioElements['lossless'] = createPreloadedAudio(losslessPath);
+          if (!buffers['mp3_320']) audioElements['mp3_320'] = createPreloadedAudio(mp3320Path);
+          if (!buffers['mp3_128']) audioElements['mp3_128'] = createPreloadedAudio(mp3128Path);
         }
       } else {
-        // Direct file:/// or fallback: preload image into memory cache
+        // Direct file:/// or fallback: preload HTML5 audio & image
+        audioElements['lossless'] = createPreloadedAudio(losslessPath);
+        audioElements['mp3_320'] = createPreloadedAudio(mp3320Path);
+        audioElements['mp3_128'] = createPreloadedAudio(mp3128Path);
         try {
           resolvedCoverUrl = await createPreloadedImage(coverUrl, isFileProtocol);
         } catch (e) {
           console.warn('Cover preload error:', e);
         }
       }
+
+      if (currentToken !== preloadCancellationToken) return;
 
       completedFiles += 4;
       const approxBytesPerSong = (song.coverSize || 500000) +
@@ -570,7 +585,8 @@
         mapping,
         reverseMapping,
         userChoice: null,
-        isCorrect: null
+        isCorrect: null,
+        isLocked: false
       });
 
       if (songRow) {
@@ -582,13 +598,17 @@
       }
     }
 
+    if (currentToken !== preloadCancellationToken) return;
+
     if (progressFill) progressFill.style.width = '100%';
     if (progressPct) progressPct.textContent = '100%';
     statusLabel.textContent = 'Semua lagu & sampul siap! Membuka panggung tes...';
     currentFileLabel.textContent = '30 file audio & 10 sampul siap di memori RAM.';
 
     setTimeout(() => {
-      startBlindTest();
+      if (currentToken === preloadCancellationToken) {
+        startBlindTest();
+      }
     }, 400);
   }
 
@@ -764,6 +784,7 @@
     const isCorrect = chosenSample === correctSample;
 
     round.isCorrect = isCorrect;
+    round.isLocked = true;
     if (isCorrect) {
       state.score++;
       state.stats.lossless++;
@@ -951,6 +972,7 @@
     const btnHome = document.getElementById('btn-header-home');
     if (btnHome) {
       btnHome.addEventListener('click', () => {
+        preloadCancellationToken++;
         state.audioEngine.stop();
         showScreen('screen-intro');
       });
@@ -1071,7 +1093,16 @@
 
     const seekBar = document.getElementById('seek-bar');
     if (seekBar) {
+      let seekRaf = null;
       seekBar.addEventListener('input', (e) => {
+        const val = parseFloat(e.target.value);
+        updateTimelineUI(val);
+        if (seekRaf) cancelAnimationFrame(seekRaf);
+        seekRaf = requestAnimationFrame(() => {
+          state.audioEngine.seek(val);
+        });
+      });
+      seekBar.addEventListener('change', (e) => {
         const val = parseFloat(e.target.value);
         state.audioEngine.seek(val);
       });
@@ -1088,6 +1119,48 @@
     if (muteBtn) {
       muteBtn.addEventListener('click', () => {
         state.audioEngine.toggleMute();
+      });
+    }
+
+    // Share Result Button
+    const btnShare = document.getElementById('btn-share-result');
+    if (btnShare) {
+      btnShare.addEventListener('click', async () => {
+        const score = state.score;
+        const pct = Math.round((score / 10) * 100);
+        const rankTitle = document.getElementById('result-rank-title')?.textContent?.trim() || 'Pendengar Kritis';
+        const isFlac = state.selectedFormat === 'flac';
+        const formatLabel = isFlac ? 'FLAC Hi-Res (24bit)' : 'WAV Hi-Res (24bit)';
+
+        const text = `🎧 Golden Ears — Blind Audio Test
+Skor: ${score} / 10 (${pct}%)
+Peringkat: ${rankTitle}
+Format Acuan: ${formatLabel}
+✓ Tebakan Tepat: ${state.stats.lossless}
+⚠️ Terkecoh 320k: ${state.stats.mp3_320}
+✗ Terkecoh 128k: ${state.stats.mp3_128}
+
+Uji kepekaan telingamu membedakan audio Lossless vs MP3 di Golden Ears!`;
+
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(text);
+            showToast('Hasil berhasil disalin ke clipboard!');
+          } else {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            showToast('Hasil berhasil disalin ke clipboard!');
+          }
+        } catch (err) {
+          console.warn('Clipboard write failed:', err);
+          showToast('Gagal menyalin otomatis. Silakan tangkap layar hasilmu!');
+        }
       });
     }
 
@@ -1165,6 +1238,10 @@
     }
 
     console.log(`Golden Ears loaded with ${state.catalog.length} songs.`);
+    const catalogCountBadge = document.getElementById('catalog-count-badge');
+    if (catalogCountBadge && state.catalog.length > 0) {
+      catalogCountBadge.textContent = `${state.catalog.length} lagu`;
+    }
     initEvents();
 
     if (window.lucide) {

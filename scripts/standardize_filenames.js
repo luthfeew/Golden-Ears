@@ -30,12 +30,13 @@ for (const entry of entries) {
 
   for (const t of targets) {
     const matched = files.find(f => t.pattern.test(f));
+    const alreadyStandard = files.find(f => f.toLowerCase() === t.standard);
     if (matched && matched !== t.standard) {
       const oldPath = path.join(folderPath, matched);
       const newPath = path.join(folderPath, t.standard);
       fs.renameSync(oldPath, newPath);
       renamedCount++;
-    } else if (matched === t.standard) {
+    } else if (alreadyStandard) {
       skippedCount++;
     }
   }

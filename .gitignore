@@ -7,3 +7,4 @@ $RECYCLE.BIN/
 
 # Log files
 *.log
+songs/log_*.txt
